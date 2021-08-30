@@ -1,6 +1,6 @@
 
 
-package com.equipo2.system;
+package com.in5bm.equipo2.system;
 
 /**
  * @author Gabriel Enrique Hurtarte Garcia

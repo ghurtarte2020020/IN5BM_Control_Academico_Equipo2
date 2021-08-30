@@ -1,4 +1,4 @@
-package com.equipo2.db;
+package com.in5bm.equipo2.db;
 
 import java.sql.*;
 import javax.sql.DataSource;
