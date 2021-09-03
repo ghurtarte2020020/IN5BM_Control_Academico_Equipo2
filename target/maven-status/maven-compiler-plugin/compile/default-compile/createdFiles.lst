@@ -1,6 +1,0 @@
-com\in5bm\equipo2\models\dao\CarreraTecnicaDaoImpl.class
-com\in5bm\equipo2\models\idao\ICarreraTecnicaDao.class
-com\in5bm\equipo2\system\Principal.class
-com\in5bm\equipo2\models\domain\CarreraTecnica.class
-com\in5bm\equipo2\db\Conexion.class
-com\in5bm\equipo2\controllers\ServletCarreraTecnicaController.class
