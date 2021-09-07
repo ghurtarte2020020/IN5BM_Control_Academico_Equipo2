@@ -21,9 +21,9 @@
     </head>
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
-        <h1>Listado Asignacion alumno</h1>
-        <table border="1">
-            <thead>
+        <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white">Listado Asignación</div>
+        <table class="table table-secondary table-hover table-responsive align-middle mb-5">
+            <thead class="table-dark">
                 <tr>
                     <th>#</th>
                     <th>Alumno</th>
@@ -40,7 +40,7 @@
                         <td>${asignacionAlumno.descripcion}</td>
                         <td>${asignacionAlumno.fecha_asignacion}</td>
                         <td>
-                            <a href="${pageContext.request.contextPath}/ServletAsignacionAlumnoController?accion=eliminar&idAsignacion=${asignacionAlumno.idAsignacion}">Eliminar</a>
+                            <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletAsignacionAlumnoController?accion=eliminar&idAsignacion=${asignacionAlumno.idAsignacion}">Eliminar</a>
                         </td>
                     </tr>
                 </c:forEach>
