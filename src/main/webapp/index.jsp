@@ -5,15 +5,18 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="./assets/css/bootstrap.css"> 
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="./assets/css/barra-navegacion.css">
-        <link rel="stylesheet" href="./assets/css/bootstrap.css"> 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
               rel="stylesheet">
-                <title>Control Academico</title>
+        <script src="https://kit.fontawesome.com/bc893c1d65.js" crossorigin="anonymous"></script>
+        <title>Control Academico</title>
     </head>
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
+        <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->
         <script src="assets/js/jquery-3.6.0.js"></script>
         <script src="assets/js/bootstrap.bundle.js"></script>

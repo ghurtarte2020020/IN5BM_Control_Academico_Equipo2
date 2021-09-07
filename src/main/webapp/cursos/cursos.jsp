@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="../assets/css/bootstrap.css"> 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
               rel="stylesheet">
+        <script src="https://kit.fontawesome.com/bc893c1d65.js" crossorigin="anonymous"></script>
         <title>Listado Cursos</title>
     </head>
     <body>
@@ -55,6 +56,7 @@
                 </c:forEach>
             </tbody>
         </table>
+        <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->
         <script src="../assets/js/jquery-3.6.0.js"></script>
         <script src="../assets/js/bootstrap.bundle.js"></script>

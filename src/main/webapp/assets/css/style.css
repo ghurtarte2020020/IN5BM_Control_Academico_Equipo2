@@ -12,6 +12,19 @@
     background: #757575; 
 }
 
+#oontrol-footer{
+    background-color: #1c1f23;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    position: fixed;
+    font-size: 12px;
+    vertical-align: middle;
+    bottom: 0px;
+    width: 100%;
+}
+
 body{
+    overflow: overlay;
     background-color: #eeeeee !important;
 }
