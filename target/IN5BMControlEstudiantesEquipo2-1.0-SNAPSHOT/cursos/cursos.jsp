@@ -37,7 +37,7 @@
                     <th>Salon</th>
                     <th></th>
                 </tr>
-                
+
             </thead>
             <tbody>
                 <c:forEach var="curso" items="${listadoCursos}">
