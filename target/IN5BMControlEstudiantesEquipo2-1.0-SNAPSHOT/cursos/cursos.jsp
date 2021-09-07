@@ -23,7 +23,7 @@
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
 
         <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white">Listado Cursos</div>
-        <div class="table-responsive mb-5">
+        <div class="table-responsive mb-5" >
             <table class="table table-secondary table-hover align-middle">
                 <thead class="table-dark">
                     <tr>
