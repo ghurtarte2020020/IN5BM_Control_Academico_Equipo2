@@ -21,9 +21,10 @@
     </head>
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
-        <h1>Listado Alumnos</h1>
-        <table border "1">
-            <thead>
+        <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white">Listado Alumnos</div>
+        <div class="table-responsive mb-5" >
+        <table class="table table-secondary table-hover align-middle">
+            <thead class="table-dark">
                 <tr>
                     <th>#</th>
                     <th>Apellidos</th>
@@ -39,7 +40,7 @@
                         <td>${alumno.apellidos}</td>
                         <td>${alumno.nombres}</td>
                         <td>${alumno.email}</td>
-                        <td><a href="${pageContext.request.contextPath}/ServletAlumnoController?accion=eliminar&carne=${alumno.carne}">Eliminar</a></td>
+                        <td><a a class="btn btn-outline-primary"  href="${pageContext.request.contextPath}/ServletAlumnoController?accion=eliminar&carne=${alumno.carne}">Eliminar</a></td>
                     </tr>
                 </c:forEach>
             </tbody>
