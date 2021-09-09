@@ -22,13 +22,14 @@
     </head>
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
-        <h1>Listado Horarios</h1>
-        <table border="1">
-            <thead>
+        <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white">Listado de Horarios</div>
+        <table class="table table-secondary table-hover table-responsive allign-middle mb-5"> 
+            <thead class="table-dark">
                 <tr>
-                    <th>#</th>
+                    <th>ID</th>
                     <th>Horario Inicio</th>
                     <th>Horario Salida</th>
+                    <th>Eliminar</th>
 
                 </tr>                                
             </thead>
@@ -38,14 +39,17 @@
 
                         <td>${horario.idHorario}</td>
                         <td>${horario.horarioInicio}</td>
-                        <td>${horario.horarioSalida}</td>   
-                        <td><a href="${pageContext.request.contextPath}/ServletHorarioController?accion=eliminar&idHorario=${horario.idHorario}">Eliminar</a></td>
+                        <td>${horario.horarioSalida}</td> 
+                        
+                        <td>
+                            <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletHorarioController?accion=eliminar&idHorario=${horario.idHorario}">Eliminar</a>
+                        </td>
 
                     </tr>         
                 </c:forEach>         
 
             </tbody>   
-        </table> 
+        </table>
         <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->
         <script src="../assets/js/jquery-3.6.0.js"></script>
