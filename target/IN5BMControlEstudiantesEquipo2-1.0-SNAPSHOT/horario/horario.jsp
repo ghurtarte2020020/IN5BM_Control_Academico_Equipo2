@@ -23,7 +23,8 @@
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
         <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white">Listado de Horarios</div>
-        <table class="table table-secondary table-hover table-responsive allign-middle mb-5"> 
+        <div class="table-responsive">
+                  <table class="table table-secondary table-hover allign-middle mb-5"> 
             <thead class="table-dark">
                 <tr>
                     <th>ID</th>
@@ -49,7 +50,8 @@
                 </c:forEach>         
 
             </tbody>   
-        </table>
+        </table>  
+        </div>
         <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->
         <script src="../assets/js/jquery-3.6.0.js"></script>
