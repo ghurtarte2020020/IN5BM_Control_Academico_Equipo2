@@ -90,15 +90,15 @@ CREATE TABLE instructor (
 );
 
 INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Perez Canto', 'Jorge', '12 av 8-42 villa nueva', '33445566');
-INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Noj Xicay', 'José Francisco', 'calle 7 9-30 zona 16', '31312345');
+INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Noj Xicay', 'José Francisco', 'Calle 7 9-30 zona 16', '31312345');
 INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Mayen Montes', 'Juan Alexander', '13-34 San Cristobal, Mixco', '65523642');
-INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Martinez Ajuchan', 'Hermes Gabriel', 'zona 1 29-84', '44889955');
-INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Orozco Ramirez', 'Luis Enrique', 'colonia el paraiso 8-21 zona 18', '12123256');
+INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Martinez Ajuchan', 'Hermes Gabriel', 'Zona 1 29-84', '44889955');
+INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Orozco Ramirez', 'Luis Enrique', 'Colonia el paraiso 8-21 zona 18', '12123256');
 INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Cifuentes Orellana', 'Jose Roberto', '12-34 san miguel petapa', '88894565');
 INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Simon Guzman', 'Milvia', '11-21 Las victorias', '6565423');
-INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Blanco Contreras', 'Carlos Marco', '2-31 colonia el maestro zona 15', '54689321');
-INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Felipez Soto', 'Juan Felipe', '1-23 san jose pinula', '45693218');
-INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Pinzon Mora', 'Nicolas', '1-23 santa elena barillas', '73261451');
+INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Blanco Contreras', 'Carlos Marco', '2-31 colonia El Maestro zona 15', '54689321');
+INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Felipez Soto', 'Juan Felipe', '1-23 San Jose Pinula', '45693218');
+INSERT INTO instructor(apellidos, nombres, direccion, telefono) values('Pinzon Mora', 'Nicolas', '1-25 Santa Elena Barillas', '73261451');
 
 DROP TABLE IF EXISTS curso;
 CREATE TABLE curso(
@@ -126,13 +126,13 @@ ON DELETE CASCADE
 ON UPDATE CASCADE
 );
 
-INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2021', '30', '20', 'mate 2', 'IN', '1', '1', '3');
-INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2020', '40', '30', 'programacion de sistemas de motores', 'ME', '2', '2', '2');
+INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2021', '30', '20', 'Matematica basica 2', 'IN', '1', '1', '3');
+INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2020', '40', '30', 'Programacion de sistemas de motores', 'ME', '2', '2', '2');
 INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2019', '12', '5', 'Biologia humana', 'SE', '7', '5', '2');
 INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2021', '20', '15', 'Hacking etico', 'IN', '8', '2', '3');
 INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2020', '10', '5', 'Sistema electrico automotriz', 'ME', '1', '3', '5');
-INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2019', '30', '27', 'programacion de sistemas de motores', 'ME', '3', '2', '8');
-INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2021', '18', '12', 'mantenimiento de equipos', 'IN', '4', '5', '3');
+INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2019', '30', '27', 'Programacion de sistemas de motores', 'ME', '3', '2', '8');
+INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2021', '18', '12', 'Mantenimiento de equipos', 'IN', '4', '5', '3');
 INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2020', '21', '14', 'Diseño de circuitoS', 'EE', '9', '1', '3');
 INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2019', '20', '15', 'Capacitación de parte de Honda', 'ME', '8', '6', '7');
 INSERT INTO curso(ciclo, cupo_maximo, cupo_minimo, descripcion, codigo_carrera, horario_id, instructor_id, salon_id) values('2019', '30', '27', 'Genetica basica', 'MA', '1', '2', '5');
