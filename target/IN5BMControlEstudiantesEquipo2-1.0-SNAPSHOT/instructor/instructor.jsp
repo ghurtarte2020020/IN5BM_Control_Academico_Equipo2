@@ -5,7 +5,10 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7c7c9da3bc75dd1836458d3a4d309801b58795f0
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
@@ -23,6 +26,7 @@
     </head>
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
+<<<<<<< HEAD
         <h1>Listado instructores </h1>
         <table border="1">
             <thead>
@@ -51,6 +55,43 @@
                 </c:forEach>
             </tbody>
         </table>
+=======
+        <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white">
+            <i class="fas fa-sliders-h"></i> Listado instructores
+        </div>
+        <div class="table-responsive">
+            <table class="table table-secondary table-hover align-middle mb-5">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Apellidos</th>
+                        <th>Nombres</th>
+                        <th>Direccion</th>
+                        <th>Telefono</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <c:forEach var="instructor" items="${listadoInstructor}">
+                        <tr>
+                            <td>${instructor.idInstructor}</td>
+                            <td>${instructor.apellidos}</td>
+                            <td>${instructor.nombres}</td>
+                            <td>${instructor.direccion}</td>
+                            <td>${instructor.telefono}</td>
+                            <td>
+                                <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletInstructorController?accion=eliminar&idInstructor=${instructor.idInstructor}">
+                                    <i class="far fa-edit"></i> Eliminar
+                                </a>
+                            </td>
+
+                        </tr>
+                    </c:forEach>
+                </tbody>
+            </table>
+        </div>
+>>>>>>> 7c7c9da3bc75dd1836458d3a4d309801b58795f0
         <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->
         <script src="../assets/js/jquery-3.6.0.js"></script>
