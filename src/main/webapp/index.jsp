@@ -24,7 +24,7 @@
             </div>
             <img src="./assets/images/estudiantes.jpg" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">!Bienvenido al sistema de control académico¡</h5>
+                <h5 class="card-title">¡Bienvenido al sistema de control académico!</h5>
                 <p class="card-text">En este sistema podrá administrar los datos de las diferentes entidades de su institución.</p>
             </div>
         </div>
