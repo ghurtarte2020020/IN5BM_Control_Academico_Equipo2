@@ -21,31 +21,34 @@
     </head>
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
-        <h1>Listado Asignacion alumno</h1>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Alumno</th>
-                    <th>Curso</th>
-                    <th>Fecha de asignacion</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <c:forEach var="asignacionAlumno" items="${listadoAsignacionAlumno}">
+        <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white">Listado Asignación</div>
+        <div class="table-responsive">
+            <table class="table table-secondary table-hover table-responsive align-middle mb-5">
+                <thead class="table-dark">
                     <tr>
-                        <td>${asignacionAlumno.idAsignacion}</td>
-                        <td>${asignacionAlumno.nombres} ${asignacionAlumno.apellidos}</td>
-                        <td>${asignacionAlumno.descripcion}</td>
-                        <td>${asignacionAlumno.fecha_asignacion}</td>
-                        <td>
-                            <a href="${pageContext.request.contextPath}/ServletAsignacionAlumnoController?accion=eliminar&idAsignacion=${asignacionAlumno.idAsignacion}">Eliminar</a>
-                        </td>
+                        <th>#</th>
+                        <th>Alumno</th>
+                        <th>Curso</th>
+                        <th>Fecha de asignacion</th>
+                        <th></th>
                     </tr>
-                </c:forEach>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <c:forEach var="asignacionAlumno" items="${listadoAsignacionAlumno}">
+                        <tr>
+                            <td>${asignacionAlumno.idAsignacion}</td>
+                            <td>${asignacionAlumno.nombres} ${asignacionAlumno.apellidos}</td>
+                            <td>${asignacionAlumno.descripcion}</td>
+                            <td>${asignacionAlumno.fecha_asignacion}</td>
+                            <td>
+                                <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletAsignacionAlumnoController?accion=eliminar&idAsignacion=${asignacionAlumno.idAsignacion}">Eliminar</a>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </tbody>
+            </table>
+        </div>
+
         <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->
         <script src="../assets/js/jquery-3.6.0.js"></script>

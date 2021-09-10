@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\controllers\ServletAlumnoController.java
 C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\domain\CarreraTecnica.java
 C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\domain\Horario.java
@@ -64,6 +65,8 @@ C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2-master\src\ma
 C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2-master\src\main\java\com\in5bm\equipo2\models\idao\ICarreraTecnicaDao.java
 >>>>>>> 7c7c9da3bc75dd1836458d3a4d309801b58795f0
 =======
+=======
+>>>>>>> 2963160484288f565295d270349156575d2d0b98
 C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\domain\Instructor.java
 C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\controllers\ServletInstructorController.java
 C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\dao\AlumnoDaoImpl.java
@@ -94,6 +97,7 @@ C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2\src\main\java
 C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\controllers\ServletSalonController.java
 C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\controllers\ServletCarreraTecnicaController.java
 C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\dao\AsignacionAlumnoDaoImpl.java
+<<<<<<< HEAD
 >>>>>>> d43a9f50c22a5f9530b198b0f1217bc6f76b0581
 =======
 C:\Users\gabri\OneDrive\Escritorio\Nueva carpeta\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\dao\CarreraTecnicaDaoImpl.java
@@ -127,3 +131,5 @@ C:\Users\gabri\OneDrive\Escritorio\Nueva carpeta\IN5BM_Control_Academico_Equipo2
 C:\Users\gabri\OneDrive\Escritorio\Nueva carpeta\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\dao\AlumnoDaoImpl.java
 C:\Users\gabri\OneDrive\Escritorio\Nueva carpeta\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\dao\InstructorDaoImpl.java
 >>>>>>> dd293914cec6a599c1e3607b0e550e8cec5d4728
+=======
+>>>>>>> 2963160484288f565295d270349156575d2d0b98
