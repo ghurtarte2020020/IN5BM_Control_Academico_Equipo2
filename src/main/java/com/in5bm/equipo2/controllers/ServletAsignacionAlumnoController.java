@@ -23,7 +23,7 @@ import javax.servlet.ServletException;
 
 @WebServlet("/ServletAsignacionAlumnoController")
 public class ServletAsignacionAlumnoController extends HttpServlet{
-    private static final String JSP_LISTAR = "asignacion-alumno/asignacionAlumno.jsp";
+    private static final String JSP_LISTAR = "asignacion-alumno/asignacion-alumno.jsp";
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
         String accion = request.getParameter("accion");
