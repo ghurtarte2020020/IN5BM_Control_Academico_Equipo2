@@ -6,9 +6,13 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 7c7c9da3bc75dd1836458d3a4d309801b58795f0
+=======
+
+>>>>>>> d43a9f50c22a5f9530b198b0f1217bc6f76b0581
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
@@ -27,6 +31,9 @@
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d43a9f50c22a5f9530b198b0f1217bc6f76b0581
         <h1>Listado instructores </h1>
         <table border="1">
             <thead>
@@ -55,6 +62,7 @@
                 </c:forEach>
             </tbody>
         </table>
+<<<<<<< HEAD
 =======
         <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white">
             <i class="fas fa-sliders-h"></i> Listado instructores
@@ -92,6 +100,8 @@
             </table>
         </div>
 >>>>>>> 7c7c9da3bc75dd1836458d3a4d309801b58795f0
+=======
+>>>>>>> d43a9f50c22a5f9530b198b0f1217bc6f76b0581
         <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->
         <script src="../assets/js/jquery-3.6.0.js"></script>
