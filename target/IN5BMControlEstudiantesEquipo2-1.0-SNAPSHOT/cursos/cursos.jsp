@@ -21,41 +21,45 @@
     </head>
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
-        <h1>Listado Cursos</h1>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Ciclo</th>
-                    <th>Cupo Maximo</th>
-                    <th>Cupo Minimo</th>
-                    <th>Descripción</th>
-                    <th>Carrera</th>
-                    <th>Horario inicio</th>
-                    <th>Horario final</th>
-                    <th>Instructor</th>
-                    <th>Salon</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <c:forEach var="curso" items="${listadoCursos}">
+
+        <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white">Listado Cursos</div>
+        <div class="table-responsive mb-5" >
+            <table class="table table-secondary table-hover align-middle">
+                <thead class="table-dark">
                     <tr>
-                        <td>${curso.idCurso}</td>
-                        <td>${curso.ciclo}</td>
-                        <td>${curso.cupoMaximo}</td>
-                        <td>${curso.cupoMinimo}</td>
-                        <td>${curso.descripcion}</td>
-                        <td>${curso.carrera}</td>
-                        <td>${curso.horarioInicio}</td>
-                        <td>${curso.horarioFinal}</td>
-                        <td>${curso.instructor}</td>
-                        <td>${curso.nombreSalon}</td>
-                        <td><a href="${pageContext.request.contextPath}/ServletCursosController?accion=eliminar&idCurso=${curso.idCurso}">Eliminar</a></td>
+                        <th>#</th>
+                        <th>Ciclo</th>
+                        <th>Cupo Maximo</th>
+                        <th>Cupo Minimo</th>
+                        <th>Descripción</th>
+                        <th>Carrera</th>
+                        <th>Horario inicio</th>
+                        <th>Horario final</th>
+                        <th>Instructor</th>
+                        <th>Salon</th>
+                        <th></th>
                     </tr>
-                </c:forEach>
-            </tbody>
-        </table>
+
+                </thead>
+                <tbody>
+                    <c:forEach var="curso" items="${listadoCursos}">
+                        <tr>
+                            <td>${curso.idCurso}</td>
+                            <td>${curso.ciclo}</td>
+                            <td>${curso.cupoMaximo}</td>
+                            <td>${curso.cupoMinimo}</td>
+                            <td>${curso.descripcion}</td>
+                            <td>${curso.carrera}</td>
+                            <td>${curso.horarioInicio}</td>
+                            <td>${curso.horarioFinal}</td>
+                            <td>${curso.instructor}</td>
+                            <td>${curso.nombreSalon}</td>
+                            <td><a class="btn btn-outline-primary"  href="${pageContext.request.contextPath}/ServletCursosController?accion=eliminar&idCurso=${curso.idCurso}">Eliminar</a></td>
+                        </tr>
+                    </c:forEach>
+                </tbody>
+            </table>
+        </div>
         <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->
         <script src="../assets/js/jquery-3.6.0.js"></script>
