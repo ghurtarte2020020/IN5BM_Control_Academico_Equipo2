@@ -21,9 +21,10 @@
     </head>
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
-        <h1>Listado Salones</h1>
-        <table border="1">
-            <tr>
+        <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white">Listado Salones</div>
+        <div class="table-responsive">
+             <table class="table table-secondary table-hover align-middle mb-5">
+            <tr class="table-dark">
                 <th>#</th>
                 <th>capacidad</th>
                 <th>descripcion</th>
@@ -38,12 +39,13 @@
                         <td>${salon.descripcion}</td>
                         <td>${salon.nombreSalon}</td>
                         <td> 
-                            <a href="${pageContext.request.contextPath}/ServletSalonController?accion=eliminar&salonId=${salon.salonId}">Eliminar</a>
+                            <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletSalonController?accion=eliminar&salonId=${salon.salonId}">Eliminar</a>
                         </td>
                     </tr>
                 </c:forEach>
             </tbody>
         </table>
+        </div>
         <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->
         <script src="../assets/js/jquery-3.6.0.js"></script>
