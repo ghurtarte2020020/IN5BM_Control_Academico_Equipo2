@@ -14,14 +14,27 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        
+        <link rel="stylesheet" href="../assets/css/bootstrap.css">
+        
         <link rel="stylesheet" href="../assets/css/style.css">
-        <link rel="stylesheet" href="../assets/css/bootstrap.css"> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        
+        
+        
         <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <link href="../assets/css/">
         <script src="https://kit.fontawesome.com/bc893c1d65.js" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css">
+        <script src="../assets/js/jquery-3.6.0.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+        
+        
+
+        
 
 
 
@@ -56,28 +69,24 @@
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label for="id" class="form-label">Id asignación</label>
-                                <input type="text" class="form-control" name="idAsignacion" id="id" readonly>
+                                <input type="text" class="form-control" name="idAsignacion" id="id disabledInput" >
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3" id="buscarAlumno">
                                 <label for="carne" class="form-label">Carné del alumno</label>
-                                <select class="form-select"   name="carne" id="mibuscador carne" data-placeholder="- Seleccione un alumno -" required>
+                                <select class="form-select"  data-live-search="true" name="carne" id="mibuscador carne" data-placeholder="- Seleccione un alumno -" required>
                                     <c:forEach var="alumno" items="${listadoAlumno}">
-                                        <option value="${alumno.carne}">Carné: ${alumno.carne} | Alumno: ${alumno.nombres} ${alumno.apellidos}</option>
+                                        <option value="${alumno.carne}">${alumno.carne} |${alumno.nombres} ${alumno.apellidos}</option>
                                     </c:forEach>
                                 </select>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3" >
                                 <label for="curso" class="form-label">Curso</label>
                                 <select class="form-select" name="idCurso" id="curso" required>
                                     <option selected>Curso</option>
                                     <c:forEach var="curso" items="${listadoCursos}">
-                                        <option value="${curso.idCurso}">ID: ${curso.idCurso} | Ciclo: ${curso.ciclo} | Cupo max: ${curso.cupoMaximo} | Cupo min: ${curso.cupoMinimo} | Curso: ${curso.descripcion}</option>
+                                        <option value="${curso.idCurso}">${curso.idCurso} | ${curso.ciclo} | ${curso.cupoMaximo} | ${curso.cupoMinimo} | ${curso.descripcion}</option>
                                     </c:forEach>
                                 </select>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">*Fecha Asignación generado automaticamente*</label>
-                                
                             </div>
                             <input type="hidden" name="accion" value="insertar">
                         </div>
@@ -111,12 +120,12 @@
                             <td>${asignacionAlumno.descripcion}</td>
                             <td>${asignacionAlumno.fecha_asignacion}</td>
                             <td>
-                                <a class="btn btn-outline-secondary" href="${pageContext.request.contextPath}/ServletAsignacionAlumnoController?accion=editar&idAsignacion=${asignacionAlumno.idAsignacion}"><i class="fas fa-trash"></i>  Editar</a>
+                                <a class="btn btn-outline-danger" href="${pageContext.request.contextPath}/ServletAsignacionAlumnoController?accion=editar&idAsignacion=${asignacionAlumno.idAsignacion}"><i class="fas fa-trash"></i>  editar</a>
                             </td>
                             <td>
                                 <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletAsignacionAlumnoController?accion=eliminar&idAsignacion=${asignacionAlumno.idAsignacion}"><i class="fas fa-trash"></i>  Eliminar</a>
                             </td>
-
+                            
                         </tr>
                     </c:forEach>
                 </tbody>
@@ -128,17 +137,19 @@
 
         <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->
-        <script src="../assets/js/jquery-3.6.0.js"></script>
+        
         <script src="../assets/js/bootstrap.bundle.js"></script>
 
 
 
 
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('#mibuscador').select2();
+        <script>
+            $('div#buscarAlumno').on('show.bs.modal', function (event) {
+              var button = $(event.relatedTarget);
+              var modal = $(this);
+              modal.find('select').selectpicker();
             });
-        </script>
+          </script>
 
 
     </body>
