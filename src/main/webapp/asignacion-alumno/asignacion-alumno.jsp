@@ -37,7 +37,7 @@
                 <div class="row">
                     <div class="col-12 col-md-3">
                         <a href="#" class="btn btn-primary btn-block " data-bs-toggle="modal" data-bs-target="#addModal">
-                            <i class="fas fa-plus"></i>Agregar una nueva asignación
+                            <i class="fas fa-plus"></i> Agregar una nueva asignación
                         </a>
                     </div>
                 </div>
@@ -54,10 +54,7 @@
                     </div>
                     <form method="POST" action="${pageContext.request.contextPath}/ServletAsignacionAlumnoController" class="was-validated">
                         <div class="modal-body">
-                            <div class="mb-3">
-                                <label for="id" class="form-label">Id asignación</label>
-                                <input type="text" class="form-control" name="idAsignacion" id="id" readonly>
-                            </div>
+                            
                             <div class="mb-3">
                                 <label for="carne" class="form-label">Carné del alumno</label>
                                 <select class="form-select"   name="carne" id="mibuscador carne" data-placeholder="- Seleccione un alumno -" required>
@@ -69,7 +66,7 @@
                             <div class="mb-3">
                                 <label for="curso" class="form-label">Curso</label>
                                 <select class="form-select" name="idCurso" id="curso" required>
-                                    <option selected>Curso</option>
+                                    
                                     <c:forEach var="curso" items="${listadoCursos}">
                                         <option value="${curso.idCurso}">ID: ${curso.idCurso} | Ciclo: ${curso.ciclo} | Cupo max: ${curso.cupoMaximo} | Cupo min: ${curso.cupoMinimo} | Curso: ${curso.descripcion}</option>
                                     </c:forEach>

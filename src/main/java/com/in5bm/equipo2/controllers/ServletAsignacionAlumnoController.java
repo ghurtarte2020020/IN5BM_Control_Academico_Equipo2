@@ -131,7 +131,15 @@ public class ServletAsignacionAlumnoController extends HttpServlet {
 
         Timestamp fecha_asignacion = Timestamp.valueOf(ActualesFechaHora);*/
         String fecha_hora_str = request.getParameter("fecha_asignacion");
-        Timestamp fecha_asignacion = Timestamp.valueOf(fecha_hora_str.replace("T"," ") + ":00.00");
+        Timestamp fecha_asignacion;
+        if (fecha_hora_str.equals("")) {
+            LocalDateTime ActualesFechaHora = LocalDateTime.now();
+
+         fecha_asignacion = Timestamp.valueOf(ActualesFechaHora);
+        }else{
+         fecha_asignacion = Timestamp.valueOf(fecha_hora_str.replace("T"," ") + ":00.00");
+        }
+        
         AsignacionAlumno asignacionAlumno = new AsignacionAlumno(idAsignacion, carne, idCurso, fecha_asignacion);
         
         int registrosModificados = new AsignacionAlumnoDaoImpl().actualizar(asignacionAlumno);
