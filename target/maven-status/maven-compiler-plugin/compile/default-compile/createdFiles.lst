@@ -14,7 +14,6 @@ com\in5bm\equipo2\models\dao\AsignacionAlumnoDaoImpl.class
 com\in5bm\equipo2\models\idao\IAsignacionAlumnoDao.class
 com\in5bm\equipo2\controllers\ServletAsignacionAlumnoController.class
 com\in5bm\equipo2\models\domain\Instructor.class
-.netbeans_automatic_build
 com\in5bm\equipo2\models\domain\Horario.class
 com\in5bm\equipo2\models\idao\ICarreraTecnicaDao.class
 com\in5bm\equipo2\models\idao\IHorarioDao.class

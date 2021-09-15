@@ -41,6 +41,8 @@ INSERT INTO horario (horario_inicio, horario_final) VALUES ('20:00', '22:00');
 INSERT INTO horario (horario_inicio, horario_final) VALUES ('14:00', '17:00');
 INSERT INTO horario (horario_inicio, horario_final) VALUES ('09:00', '11:00');
 
+
+
 DROP TABLE IF EXISTS salon;
 CREATE TABLE salon (
   salon_id INT NOT NULL AUTO_INCREMENT,
