@@ -3,10 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-<<<<<<< HEAD
 
-=======
->>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
 package com.in5bm.equipo2.models.dao;
 
 import com.in5bm.equipo2.db.Conexion;
@@ -18,17 +15,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-<<<<<<< HEAD
-/**
- * 
- * @author 
- * @date 2/09/2021
- * @time 06:50:08 PM
- */
-public class SalonDaoImpl implements ISalonDao{
-    private static final String SQL_SELECT = "Select salon_id, capacidad, descripcion, nombre_salon from Salon";
-    private static final String SQL_DELETE = "delete from Salon where salon_id =?";
-=======
 
 /**
  *
@@ -42,7 +28,6 @@ public class SalonDaoImpl implements ISalonDao {
     private static final String SQL_DELETE = "delete from Salon where salon_id =?";
     private static final String SQL_INSERT = "INSERT INTO salon (capacidad, descripcion, nombre_salon) values (?,?,?)";
     private static final String SQL_UPDATE = "UPDATE salon SET capacidad=?, descripcion=?, nombre_salon=? where salon_id=?";
->>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
     private PreparedStatement pstmt = null;
     private ResultSet rs = null;
     private Connection conn = null;
@@ -76,9 +61,6 @@ public class SalonDaoImpl implements ISalonDao {
 
     @Override
     public Salon encontrar(Salon salon) {
-<<<<<<< HEAD
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-=======
         try {
             conn = Conexion.getConnection();
             pstmt = conn.prepareStatement(SQL_SELECT_BY_ID);
@@ -103,14 +85,10 @@ public class SalonDaoImpl implements ISalonDao {
             Conexion.close(conn);
         }
         return salon;
->>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
     }
 
     @Override
     public int insertar(Salon salon) {
-<<<<<<< HEAD
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-=======
         int rows = 0;
         try {
             conn = Conexion.getConnection();
@@ -130,14 +108,10 @@ public class SalonDaoImpl implements ISalonDao {
         }
 
         return rows;
->>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
     }
 
     @Override
     public int actualizar(Salon salon) {
-<<<<<<< HEAD
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-=======
         int rows = 0;
         try {
             conn = Conexion.getConnection();
@@ -158,7 +132,6 @@ public class SalonDaoImpl implements ISalonDao {
         }
 
         return rows;
->>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
     }
 
     @Override

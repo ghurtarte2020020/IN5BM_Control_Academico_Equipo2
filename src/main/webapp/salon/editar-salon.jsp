@@ -1,7 +1,7 @@
 <%-- 
     Document   : Salon
     Created on : 2/09/2021, 07:39:41 PM
-    Author     : Pablo Emmanuel Mich Mux // Codigo Técnico: IN5BM
+ Author     : Cesar Rosales // Codigo Técnico: IN5BM
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -22,30 +22,46 @@
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
 
-        <form method="POST" action="${pageContext.request.contextPath}/ServletSalonController" class="was-validated">
-            <div class="mb-3">
-                <label class="form-label" for="nombre">Nombre</label>
-                <input value="${salon.nombreSalon}" type="text" class="form-control" name="nombre" id="nombre" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="descripcion">Descripción</label>
-                <input value="${salon.descripcion}" type="text" class="form-control" name="descripcion" id="descripcion" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="capacidad">Capacidad</label>
-                <input value="${salon.capacidad}" type="number" class="form-control" name="capacidad" id="capacidad" min="5" max="50" value="5" required>
-            </div>
-            <input type="hidden" name="salonId" value="${salon.salonId}">
-            <input type="hidden" name="accion" value="actualizar">
 
-            <a class="btn btn-secondary"
-               href="${pageContext.request.contextPath}/ServletSalonController?accion=listar"
-               >Cancelar</a
-            >
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                        <div class="card mt-5">
+                            <div class="card-header bg-black text-light">
+                                    <h4 class="text-center">Editar Salon</h4>
+                            </div>
+                            <div class="card-body bg-dark text-light">
 
-            <button type="submit" class="btn btn-success">Guardar</button>
-        </form>
+                                <form method="POST" action="${pageContext.request.contextPath}/ServletSalonController" class="was-validated">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="nombre">Nombre</label>
+                                        <input value="${salon.nombreSalon}" type="text" class="form-control" name="nombre" id="nombre" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="descripcion">Descripción</label>
+                                        <input value="${salon.descripcion}" type="text" class="form-control" name="descripcion" id="descripcion" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="capacidad">Capacidad</label>
+                                        <input value="${salon.capacidad}" type="number" class="form-control" name="capacidad" id="capacidad" min="5" max="50" value="5" required>
+                                    </div>
+                                    <input type="hidden" name="salonId" value="${salon.salonId}">
+                                    <input type="hidden" name="accion" value="actualizar">
 
+                                    <a class="btn btn-secondary"
+                                       href="${pageContext.request.contextPath}/ServletSalonController?accion=listar"
+                                       >Cancelar</a
+                                    >
+
+                                    <button type="submit" class="btn btn-success">Guardar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
         <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->
         <script src="./assets/js/jquery-3.6.0.js"></script>

@@ -20,38 +20,22 @@
         <script src="https://kit.fontawesome.com/bc893c1d65.js" crossorigin="anonymous"></script>
         <title>Listado Instructores</title>
     </head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <body>
-=======
 
     <body>
 
         <!-- cabecera -->
->>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
-=======
-    <body>
->>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
 
         <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white col-11 mx-auto">
             <i class="fas fa-list"></i> Listado instructores <i class="fas fa-sm fa-chalkboard-teacher"></i>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-        <section id="accions" class="py-4 mb-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-3">
-                        <a href="#" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#addModal">
-                            <i class="fas fa-plus"></i>Agregar instructor
-                        </a>
-                    </div>   
-                </div>    
-            </div>
-        </section>
+        <div class="col-11 mx-auto">
+            <a href="#" class="btn btn-success btn-block" data-bs-toggle="modal" data-bs-target="#addModal">
+                <i class="fas fa-plus"></i>
+                Agregar Instructor 
+            </a>    
+        </div>  
 
         <!-- Modal -->
         <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -91,18 +75,15 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-primary">Guardar cambios</button>                            
+                            <button type="submit" class="btn btn-success">Guardar</button>                            
                         </div>
                     </form>
                 </div>
             </div>
         </div>  
 
->>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
-=======
->>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
-        <div class="table-responsive mb-5 col-11 mx-auto">
-            <table class="table table-secondary table-hover align-middle">
+        <div class="table-responsive my-3 col-11 mx-auto">
+            <table class="table table-secondary table-hover table-responsive align-middle">
                 <thead class="table-dark">
                     <tr>
                         <th>#</th>
@@ -111,13 +92,7 @@
                         <th>Direccion</th>
                         <th>Telefono</th>
                         <th> </th>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                         <th> </th>
->>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
-=======
->>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
                     </tr>
                 </thead>
 
@@ -130,18 +105,12 @@
                             <td>${instructor.direccion}</td>
                             <td>${instructor.telefono}</td>
                             <td>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                                <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletInstructorController?accion=editar&idInstructor=${instructor.idInstructor}">
+                                <a class="btn btn-warning" href="${pageContext.request.contextPath}/ServletInstructorController?accion=editar&idInstructor=${instructor.idInstructor}">
                                     <i class="far fa-edit"></i> Editar
                                 </a>
                             </td>
                             <td>
->>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
-=======
->>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
-                                <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletInstructorController?accion=eliminar&idInstructor=${instructor.idInstructor}">
+                                <a class="btn btn-danger" href="${pageContext.request.contextPath}/ServletInstructorController?accion=eliminar&idInstructor=${instructor.idInstructor}">
                                     <i class="fas fa-trash"></i> Eliminar
                                 </a>
                             </td>
@@ -151,14 +120,6 @@
                 </tbody>
             </table>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
-        <!--Javascript-->
-        <script src="../assets/js/jquery-3.6.0.js"></script>
-        <script src="../assets/js/bootstrap.bundle.js"></script>
-    </body>
-=======
                     
         <!-- footer -->
         <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
@@ -169,12 +130,4 @@
         
     </body>
     
->>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
-=======
-        <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
-        <!--Javascript-->
-        <script src="../assets/js/jquery-3.6.0.js"></script>
-        <script src="../assets/js/bootstrap.bundle.js"></script>
-    </body>
->>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
 </html>

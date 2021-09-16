@@ -21,20 +21,36 @@
     </head>
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                        <div class="card mt-5">
+                            <div class="card-header bg-black text-light">
+                                <h4 class="text-center">Editar Carrera</h4>
+                            </div>
+                            <div class="card-body bg-dark text-light">
+                                <form method="POST" action="${pageContext.request.contextPath}/ServletCarreraTecnicaController" class="was-validated">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="nombre">Nombre de la Carrera</label>
+                                        <input type="text" class="form-control" name="nombre" id="nombre" required  value="${carrera.nombre}">
+                                    </div>
+                                    <input type="hidden" name="codigo" value="${carrera.codigo_carrera}">
+                                    <input type="hidden" name="accion" value="actualizar">
+                                    <a class="btn btn-secondary"
+                                       href="${pageContext.request.contextPath}/ServletCarreraTecnicaController?accion=listar"
+                                       >Cancelar</a
+                                    >
+                                    <button type="submit" class="btn btn-success">Guardar</button>
+                                </form>
 
-        <form method="POST" action="${pageContext.request.contextPath}/ServletCarreraTecnicaController" class="was-validated">
-            <div class="mb-3">
-                <label class="form-label" for="nombre">Nombre de la Carrera</label>
-                <input type="text" class="form-control" name="nombre" id="nombre" required  value="${carrera.nombre}">
-                       </div>
-                       <input type="hidden" name="codigo" value="${carrera.codigo_carrera}">
-                <input type="hidden" name="accion" value="actualizar">
-                    <a class="btn btn-secondary"
-                       href="${pageContext.request.contextPath}/ServletCarreraTecnicaController?accion=listar"
-                       >Cancelar</a
-                    >
-                    <button type="submit" class="btn btn-success">Guardar</button>
-        </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
 
         <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->

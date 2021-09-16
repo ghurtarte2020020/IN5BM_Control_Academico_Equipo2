@@ -47,6 +47,9 @@ public class ServletLoginController extends HttpServlet {
                 this.mensaje = this.ERROR;
                 response.sendRedirect("login.jsp");
             }
+        } else {
+            this.mensaje = this.ERROR;
+            response.sendRedirect("login.jsp");
         }
 
         sesion.setAttribute("mensaje", mensaje);

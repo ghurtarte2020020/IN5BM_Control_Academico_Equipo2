@@ -1,12 +1,14 @@
 
 package com.in5bm.equipo2.models.domain;
 
+import java.io.Serializable;
+
 /**
  * 
  * @author Axel Javier Guadalupe Alvarez Felipe
  */
-public class Instructor {
-
+public class Instructor implements Serializable{
+    private static final long serialVersionUID = 1L;
     private int idInstructor;
     private String apellidos;
     private String nombres;

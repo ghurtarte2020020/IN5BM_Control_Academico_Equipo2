@@ -6,14 +6,16 @@
 
 package com.in5bm.equipo2.models.domain;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Ricardo Paz <rpaz-2017457@kinal.edu.gt>
    @date 30-ago-2021
    @time 21:27:26
  */
-public class Alumno {
-    
+public class Alumno implements Serializable{
+    private static final long serialVersionUID = 1L;
     private String carne;
     private String apellidos;
     private String nombres;

@@ -28,6 +28,12 @@
                 <p class="card-text">En este sistema podrá administrar los datos de las diferentes entidades de su institución.</p>
             </div>
         </div>
+        <div class="mx-auto mb-4 col-11 col-sm-5">
+            <a class="btn btn-success w-100"
+               data-target="${pageContext.request.contextPath}/index.jsp" href="${pageContext.request.contextPath}/index.jsp"
+               >Cerrar Sesión</a
+            >
+        </div>       
 
         <!--Javascript-->
         <script src="assets/js/jquery-3.6.0.js"></script>

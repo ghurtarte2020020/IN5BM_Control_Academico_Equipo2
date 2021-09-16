@@ -1,16 +1,17 @@
-
-
 package com.in5bm.equipo2.models.domain;
 
+import java.io.Serializable;
+
 /**
- * @author Gabriel Enrique Hurtarte Garcia
- * Codigo técnico:IN5BM
+ * @author Gabriel Enrique Hurtarte Garcia Codigo técnico:IN5BM
  * @date 1/09/2021
  * @time 10:17:36 PM
  */
-public class CarreraTecnica {
-private String codigo_carrera;
-private String nombre;
+public class CarreraTecnica implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    private String codigo_carrera;
+    private String nombre;
 
     public CarreraTecnica(String codigo_carrera, String nombre) {
         this.codigo_carrera = codigo_carrera;

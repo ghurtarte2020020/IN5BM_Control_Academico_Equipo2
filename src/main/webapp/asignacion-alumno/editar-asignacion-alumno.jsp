@@ -23,44 +23,62 @@
     </head>
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
-        <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white col-11 mx-auto"><i class="fas fa-list"></i> Editar Asignaciones <i class="fas fa-sm fa-user-clock align-middle"></i></div>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                        <div class="card mt-5">
+                            <div class="card-header bg-black text-light">
+                                <h4 class="text-center">Editar Asignación</h4>
+                            </div>
+                            <div class="card-body bg-dark">
+                                <form method="POST" action="${pageContext.request.contextPath}/ServletAsignacionAlumnoController" class="was-validated">
 
-        <form method="POST" action="${pageContext.request.contextPath}/ServletAsignacionAlumnoController" class="was-validated">
+                                    <div class="mb-3">
+                                        <label for="id" class="form-label text-light">Id asignación</label>
+                                        <input type="text" class="form-control " name="idAsignacion" id="id" value="${asignacionAlumno.idAsignacion}" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="carne" class="form-label text-light">Carné del alumno</label>
+                                        <select class="form-select"   name="carne" id="mibuscador carne" data-placeholder="- Seleccione un alumno -"  required>
+                                            <option value="${asignacionAlumno.carne}">Carné: ${asignacionAlumno.carne} | Alumno: ${asignacionAlumno.nombres} ${asignacionAlumno.apellidos} </option>
+                                            <c:forEach var="alumno" items="${listadoAlumno}">
+                                                <option value="${alumno.carne}">Carné: ${alumno.carne} | Alumno: ${alumno.nombres} ${alumno.apellidos}</option>
+                                            </c:forEach>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="curso" class="form-label text-light">Curso</label>
+                                        <select class="form-select" name="idCurso" id="curso" required>
+                                            <option selected value="${asignacionAlumno.idCurso}">ID: ${asignacionAlumno.idCurso} | Curso: ${asignacionAlumno.descripcion}</option>
+                                            <c:forEach var="curso" items="${listadoCursos}">
+                                                <option value="${curso.idCurso}">ID: ${curso.idCurso} | ${curso.descripcion}</option>
+                                            </c:forEach>
+                                        </select>
+                                    </div>
+                                    <div >
+                                        <label for="fecha_asignacion" class="form-label text-light">Fecha Asignación</label>
+                                        <input type="datetime-local" class="form-control" id="fecha_asignacion" name="fecha_asignacion" value="${asignacionAlumno.fecha_asignacion}" fmt:formatDate pattern = "yyyy-MM-dd HH:mm:ss">
+                                    </div>
+                                    <input type="hidden" name="idAsignacion" value="${asignacionAlumno.idAsignacion}">
+                                    <input type="hidden" name="accion" value="actualizar">
 
-            <div class="mb-3">
-                <label for="id" class="form-label">Id asignación</label>
-                <input type="text" class="form-control" name="idAsignacion" id="id" value="${asignacionAlumno.idAsignacion}" readonly>
+
+                                     <a class="btn btn-secondary"
+                                         href="${pageContext.request.contextPath}/ServletAsignacionAlumnoController?accion=listar"
+                                         >Cancelar</a
+                                    >
+                                    <button type="submit" class="btn btn-success">Guardar</button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="carne" class="form-label">Carné del alumno</label>
-                <select class="form-select"   name="carne" id="mibuscador carne" data-placeholder="- Seleccione un alumno -"  required>
-                    <option value="${asignacionAlumno.carne}">Carné: ${asignacionAlumno.carne} | Alumno: ${asignacionAlumno.nombres} ${asignacionAlumno.apellidos} </option>
-                    <c:forEach var="alumno" items="${listadoAlumno}">
-                        <option value="${alumno.carne}">Carné: ${alumno.carne} | Alumno: ${alumno.nombres} ${alumno.apellidos}</option>
-                    </c:forEach>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="curso" class="form-label">Curso</label>
-                <select class="form-select" name="idCurso" id="curso" required>
-                    <option selected value="${asignacionAlumno.idCurso}">ID: ${asignacionAlumno.idCurso} | Curso: ${asignacionAlumno.descripcion}</option>
-                    <c:forEach var="curso" items="${listadoCursos}">
-                        <option value="${curso.idCurso}">ID: ID: ${curso.idCurso} | Ciclo: ${curso.ciclo} | Cupo max: ${curso.cupoMaximo} | Cupo min: ${curso.cupoMinimo} | Curso: ${curso.descripcion}</option>
-                    </c:forEach>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="fecha_asignacion" class="form-label">Fecha Asignación</label>
-                <input type="datetime-local" class="form-control" id="fecha_asignacion" name="fecha_asignacion" value="${asignacionAlumno.fecha_asignacion}" fmt:formatDate pattern = "yyyy-MM-dd HH:mm:ss">
-            </div>
-            <input type="hidden" name="idAsignacion" value="${asignacionAlumno.idAsignacion}">
-            <input type="hidden" name="accion" value="actualizar">
+        </main>
 
-
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-primary">Guardar</button>
-
-        </form>
 
 
 

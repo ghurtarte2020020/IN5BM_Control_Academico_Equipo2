@@ -3,23 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.in5bm.equipo2.models.domain;
 
+import java.io.Serializable;
 import java.sql.Time;
 
 /**
  *
-* @author Marcelo Javier Diaz Pineda
-* @date 30/08/2021
-* @time 04:41:41 PM
+ * @author Marcelo Javier Diaz Pineda
+ * @date 30/08/2021
+ * @time 04:41:41 PM
  */
-public class Cursos {
-    private int idCurso; 
-    private int ciclo; 
-    private int cupoMaximo; 
-    private int cupoMinimo; 
-    private String descripcion; 
+public class Cursos implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    private int idCurso;
+    private int ciclo;
+    private int cupoMaximo;
+    private int cupoMinimo;
+    private String descripcion;
     private String codigoCarrera;
     private int idHorario;
     private int idInstructor;
@@ -111,8 +113,6 @@ public class Cursos {
     public void setCarreraDescripcion(String carreraDescripcion) {
         this.carreraDescripcion = carreraDescripcion;
     }
-    
-    
 
     public String getCodigoCarrera() {
         return codigoCarrera;
@@ -146,8 +146,6 @@ public class Cursos {
         this.idSalon = idSalon;
     }
 
-    
-    
     public int getIdCurso() {
         return idCurso;
     }
@@ -232,8 +230,5 @@ public class Cursos {
     public String toString() {
         return "Cursos{" + "idCurso=" + idCurso + ", ciclo=" + ciclo + ", cupoMaximo=" + cupoMaximo + ", cupoMinimo=" + cupoMinimo + ", descripcion=" + descripcion + ", codigoCarrera=" + codigoCarrera + ", idHorario=" + idHorario + ", idInstructor=" + idInstructor + ", idSalon=" + idSalon + ", carrera=" + carrera + ", horarioInicio=" + horarioInicio + ", horarioFinal=" + horarioFinal + ", instructor=" + instructor + ", nombreSalon=" + nombreSalon + ", carreraDescripcion=" + carreraDescripcion + '}';
     }
-    
 
-    
-    
 }

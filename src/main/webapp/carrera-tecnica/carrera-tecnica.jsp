@@ -76,7 +76,7 @@
                                 <a class="btn btn-warning" href="${pageContext.request.contextPath}/ServletCarreraTecnicaController?accion=editar&codigo_carrera=${carrera.codigo_carrera}"><i class="far fa-edit"></i>  Editar</a>
                             </td>
                             <td>
-                                <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletCarreraTecnicaController?accion=eliminar&codigo_carrera=${carrera.codigo_carrera}"><i class="fas fa-trash"></i>  Eliminar</a>
+                                <a class="btn btn-danger" href="${pageContext.request.contextPath}/ServletCarreraTecnicaController?accion=eliminar&codigo_carrera=${carrera.codigo_carrera}"><i class="fas fa-trash"></i>  Eliminar</a>
                             </td>
                         </tr>
                     </c:forEach>

@@ -19,26 +19,44 @@
         <title>Editar Alumnos</title>
     </head>
     <body>
+
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
-        <form method="POST" action="${pageContext.request.contextPath}/ServletAlumnoController" class="was-validated">
-            <div class="mb-3">
-                <label for="apellidos" class="form-label">Apellidos</label>
-                <input type="text" class="form-control" name="apellidos" id="apellidos" required value="${alumno.apellidos}">
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                        <div class="card mt-5">
+                            <div class="card-header bg-black text-light">
+                                <h4 class="text-center">Editar Horarios</h4>
+                            </div>
+                            <div class="card-body bg-dark">
+                                <form method="POST" action="${pageContext.request.contextPath}/ServletAlumnoController" class="was-validated">
+                                    <div class="mb-3">
+                                        <label for="apellidos" class="form-label">Apellidos</label>
+                                        <input type="text" class="form-control" name="apellidos" id="apellidos" required value="${alumno.apellidos}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="nombres" class="form-label">Nombres</label>
+                                        <input type="text" class="form-control" name="nombres" id="nombres" required value="${alumno.nombres}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" name="email" id="email" required value="${alumno.email}">
+                                    </div>
+
+                                    <input type="hidden" name="carne" value="${alumno.carne}">
+                                    <input type="hidden" name="accion" value="actualizar">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="model">Cancelar</button>
+                                    <button type="submit" class="btn btn-success">Guardar</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="nombres" class="form-label">Nombres</label>
-                <input type="text" class="form-control" name="nombres" id="nombres" required value="${alumno.nombres}">
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" name="email" id="email" required value="${alumno.email}">
-            </div>
-            
-            <input type="hidden" name="carne" value="${alumno.carne}">
-            <input type="hidden" name="accion" value="actualizar">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="model">Cancelar</button>
-            <button type="submit" class="btn btn-success">Guardar</button>
-        </form>
+        </main>
+
         <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->
         <script src="../assets/js/jquery-3.6.0.js"></script>

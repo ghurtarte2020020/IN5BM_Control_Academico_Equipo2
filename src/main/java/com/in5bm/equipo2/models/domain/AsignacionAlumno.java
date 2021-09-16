@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.in5bm.equipo2.models.domain;
+
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
@@ -13,7 +14,9 @@ import java.sql.Timestamp;
  * @date 30/08/2021
  * @time 02:20:17 PM
  */
-public class AsignacionAlumno {
+public class AsignacionAlumno implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String idAsignacion;
     private String carne;
     private int idCurso;
@@ -31,7 +34,7 @@ public class AsignacionAlumno {
         this.apellidos = apellidos;
         this.descripcion = descripcion;
     }
-    
+
     public AsignacionAlumno() {
     }
 
@@ -52,7 +55,6 @@ public class AsignacionAlumno {
         this.fecha_asignacion = fecha_asignacion;
     }
 
-    
     public String getNombres() {
         return nombres;
     }
@@ -76,7 +78,7 @@ public class AsignacionAlumno {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    
+
     public String getIdAsignacion() {
         return idAsignacion;
     }
@@ -114,10 +116,4 @@ public class AsignacionAlumno {
         return "AsignacionAlumno{" + "idAsignacion=" + idAsignacion + ", carne=" + carne + ", idCurso=" + idCurso + ", fecha_asignacion=" + fecha_asignacion + '}';
     }
 
-   
-
-    
-    
-    
-    
 }

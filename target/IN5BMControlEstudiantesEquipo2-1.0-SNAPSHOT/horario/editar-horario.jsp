@@ -21,9 +21,6 @@
     <body>
         
          <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
-        <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white">Listado de Horarios</div>
-        <table class="table table-secondary table-hover table-responsive allign-middle mb-5"> 
-            <thead class="table-dark">
 
         <!--Esto es el formulario que llamamos al presionar el boton-->
 
@@ -37,9 +34,9 @@
                     <div class="col-12 col-md-12">
                         <div class="card mt-5">
                             <div class="card-header bg-black text-light">
-                                <h4 class="text-center">Editar Horarios</h4>
+                                <h4 class="text-center">Editar Horario</h4>
                             </div>
-                            <div class="card-body bg-dark">
+                            <div class="card-body bg-dark text-light">
                                 <form method="POST" action="${pageContext.request.contextPath}/ServletHorarioController" class="was-validated">
 
                                     <label for="horarioInicio" class="form-label text-light">Horario Inicio</label>

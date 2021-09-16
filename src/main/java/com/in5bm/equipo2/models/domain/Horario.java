@@ -5,31 +5,26 @@
  */
 package com.in5bm.equipo2.models.domain;
 
+import java.io.Serializable;
 import java.sql.Time;
 import java.util.Date;
 
 /**
- * @author Cristian Noe Cumez Morales
- * Codigo técnico:IN5BM
+ * @author Cristian Noe Cumez Morales Codigo técnico:IN5BM
  * @date 9/1/2021
  * @time 07:55:02
  */
-
-public class Horario {
-    
-    private  int idHorario;
+public class Horario implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private int idHorario;
     private Time horarioInicio;
     private Time horarioFinal;
     private Date dateInicio;
     private Date dateFinal;
 
     public Horario() {
-   
-    }
-    
-    
 
-    
+    }
 
     public Horario(Time horarioInicio, Time horarioFinal) {
         this.horarioInicio = horarioInicio;
@@ -50,12 +45,12 @@ public class Horario {
     public Horario(int idHorario) {
         this.idHorario = idHorario;
     }
-   
+
     /*
     public Horario(int idHorario) {
        
     }
-    */
+     */
     public Date getDateIncio() {
         return dateInicio;
     }
@@ -100,6 +95,5 @@ public class Horario {
     public String toString() {
         return "Horario{" + "idHorario=" + idHorario + ", horarioInicio=" + horarioInicio + ", horarioFinal=" + horarioFinal + '}';
     }
-    
-        
+
 }

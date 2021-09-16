@@ -3,16 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.in5bm.equipo2.models.domain;
 
+import java.io.Serializable;
+
 /**
- * 
- * @author 
- * @date 2/09/2021
+ *
+ * @author @date 2/09/2021
  * @time 06:52:40 PM
  */
-public class Salon {
+public class Salon implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private int salonId;
     private int capacidad;
     private String descripcion;
@@ -30,7 +32,6 @@ public class Salon {
         this.descripcion = descripcion;
         this.nombreSalon = nombreSalon;
     }
-    
 
     public Salon(int salonId, int capacidad, String descripcion, String nombreSalon) {
         this.salonId = salonId;

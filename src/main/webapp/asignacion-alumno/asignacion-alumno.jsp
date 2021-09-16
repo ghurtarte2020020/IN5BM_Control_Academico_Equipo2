@@ -32,18 +32,12 @@
         <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white col-11 mx-auto"><i class="fas fa-list"></i> Listado Asignaciones <i class="fas fa-sm fa-user-clock align-middle"></i></div>
 
         <!-- Boton para agregar -->
-        <section id="accions" class="py-4 mb-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-3">
-                        <a href="#" class="btn btn-primary btn-block " data-bs-toggle="modal" data-bs-target="#addModal">
-                            <i class="fas fa-plus"></i> Agregar una nueva asignación
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <div class="col-11 mx-auto">
+            <a href="#" class="btn btn-success btn-block" data-bs-toggle="modal" data-bs-target="#addModal">
+                <i class="fas fa-plus"></i>
+                Agregar Asignacion 
+            </a>    
+        </div>  
         <!-- Modal -->
         <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -68,7 +62,7 @@
                                 <select class="form-select" name="idCurso" id="curso" required>
                                     
                                     <c:forEach var="curso" items="${listadoCursos}">
-                                        <option value="${curso.idCurso}">ID: ${curso.idCurso} | Ciclo: ${curso.ciclo} | Cupo max: ${curso.cupoMaximo} | Cupo min: ${curso.cupoMinimo} | Curso: ${curso.descripcion}</option>
+                                        <option value="${curso.idCurso}">ID: ${curso.idCurso} | ${curso.descripcion}</option>
                                     </c:forEach>
                                 </select>
                             </div>
@@ -88,7 +82,7 @@
         </div>
 
 
-        <div class="table-responsive mb-5 col-11 mx-auto">
+        <div class="table-responsive my-3 col-11 mx-auto">
             <table class="table table-secondary table-hover table-responsive align-middle">
                 <thead class="table-dark">
                     <tr>
@@ -108,10 +102,10 @@
                             <td>${asignacionAlumno.descripcion}</td>
                             <td>${asignacionAlumno.fecha_asignacion}</td>
                             <td>
-                                <a class="btn btn-outline-secondary" href="${pageContext.request.contextPath}/ServletAsignacionAlumnoController?accion=editar&idAsignacion=${asignacionAlumno.idAsignacion}"><i class="fas fa-trash"></i>  Editar</a>
+                                <a class="btn btn-warning" href="${pageContext.request.contextPath}/ServletAsignacionAlumnoController?accion=editar&idAsignacion=${asignacionAlumno.idAsignacion}"><i class="far fa-edit"></i>  Editar</a>
                             </td>
                             <td>
-                                <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletAsignacionAlumnoController?accion=eliminar&idAsignacion=${asignacionAlumno.idAsignacion}"><i class="fas fa-trash"></i>  Eliminar</a>
+                                <a class="btn btn-danger" href="${pageContext.request.contextPath}/ServletAsignacionAlumnoController?accion=eliminar&idAsignacion=${asignacionAlumno.idAsignacion}"><i class="fas fa-trash"></i>  Eliminar</a>
                             </td>
 
                         </tr>

@@ -1,7 +1,7 @@
 <%-- 
     Document   : Salon
     Created on : 2/09/2021, 07:39:41 PM
-    Author     : Pablo Emmanuel Mich Mux // Codigo Técnico: IN5BM
+    Author     : Cesar Rosales // Codigo Técnico: IN5BM
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -23,12 +23,12 @@
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
         <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white col-11 mx-auto"><i class="fas fa-list"></i> Listado Salones <i class="fas fa-sm fa-chalkboard align-middle"></i></div>
-<<<<<<< HEAD
-=======
-        <a href="#" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#addModal">
-            <i class="fas fa-plus"></i>
-            Agregar Salon
-        </a>
+        <div class="col-11 mx-auto">
+            <a href="#" class="btn btn-success btn-block" data-bs-toggle="modal" data-bs-target="#addModal">
+                <i class="fas fa-plus"></i>
+                Agregar Salon 
+            </a>    
+        </div>  
         
          <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -62,19 +62,15 @@
                 </div>
             </div>
                             
->>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
-        <div class="table-responsive mb-5 col-11 mx-auto">
-            <table class="table table-secondary table-hover align-middle">
+        <div class="table-responsive my-3 col-11 mx-auto">
+            <table class="table table-secondary table-hover table-responsive align-middle">
                 <tr class="table-dark">
                     <th>#</th>
                     <th>capacidad</th>
                     <th>descripcion</th>
                     <th>Nombre del Salon</th>
                     <th></th>
-<<<<<<< HEAD
-=======
                     <th></th>
->>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
                 </tr>
                 <tbody>
                     <c:forEach var="salon" items="${listadoSalon}">
@@ -83,13 +79,10 @@
                             <td>${salon.capacidad}</td>
                             <td>${salon.descripcion}</td>
                             <td>${salon.nombreSalon}</td>
-                            <td> <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletSalonController?accion=eliminar&salonId=${salon.salonId}"><i class="fas fa-trash"></i>  Eliminar</a>
+                            <td> <a class="btn btn-warning" href="${pageContext.request.contextPath}/ServletSalonController?accion=editar&salonId=${salon.salonId}"><i class="far fa-edit"></i> Editar</a>
                             </td>
-<<<<<<< HEAD
-=======
-                              <td> <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletSalonController?accion=editar&salonId=${salon.salonId}">Editar</a>
+                            <td> <a class="btn btn-danger" href="${pageContext.request.contextPath}/ServletSalonController?accion=eliminar&salonId=${salon.salonId}"><i class="fas fa-trash"></i>  Eliminar</a>
                             </td>
->>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
                         </tr>
                     </c:forEach>
                 </tbody>

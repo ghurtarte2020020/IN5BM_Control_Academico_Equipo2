@@ -26,18 +26,12 @@
 
         <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white col-11 mx-auto"><i class="fas fa-list"></i> Listado Cursos <i class="fas fa-sm fa-book align-middle"></i></div>
 
-        <section id="accions" class="py-4 mb-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-3">
-                        <a href="#" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#addModal">
-                            <i class="fas fa-plus"></i>
-                            Agregar Curso
-                        </a>
-                    </div>                        
-                </div>
-            </div>                
-        </section>
+        <div class="col-11 mx-auto">
+            <a href="#" class="btn btn-success btn-block" data-bs-toggle="modal" data-bs-target="#addModal">
+                <i class="fas fa-plus"></i>
+                Agregar Curso 
+            </a>    
+        </div>  
 
         <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -76,7 +70,7 @@
                                 <label class="form-label" for="horario">Horario</label>
                                 <select class="form-select" aria-label="Default select example" name="horario" id="horario" required>
                                     <c:forEach var="horario" items="${listadoHorario}">
-                                        <option value="${horario.idHorario}">${horario.horarioInicio} a ${horario.horarioSalida}</option>
+                                        <option value="${horario.idHorario}">${horario.horarioInicio} a ${horario.horarioFinal}</option>
                                     </c:forEach>
                                 </select>
                             </div>
@@ -107,8 +101,8 @@
             </div>
         </div>
 
-        <div class="table-responsive mb-5 col-11 mx-auto" >
-            <table class="table table-secondary table-hover align-middle">
+        <div class="table-responsive my-3 col-11 mx-auto" >
+            <table class="table table-secondary table-hover table-responsive align-middle">
                 <thead class="table-dark">
                     <tr>
                         <th>#</th>
@@ -121,7 +115,7 @@
                         <th>Horario final</th>
                         <th>Instructor</th>
                         <th>Salon</th>
-                        
+                        <th></th>
                         <th></th>
                     </tr>
 
@@ -140,11 +134,11 @@
                             <td>${curso.instructor}</td>
                             <td>${curso.nombreSalon}</td>
                             <td>
-                                <a class="btn btn-outline-primary"  href="${pageContext.request.contextPath}/ServletCursosController?accion=eliminar&idCurso=${curso.idCurso}"><i class="fas fa-trash"></i>  Eliminar</a></td>
-                            <td>
-                                <a class="btn btn-outline-primary"  href="${pageContext.request.contextPath}/ServletCursosController?accion=editar&idCurso=${curso.idCurso}">
+                                <a class="btn btn-warning"  href="${pageContext.request.contextPath}/ServletCursosController?accion=editar&idCurso=${curso.idCurso}">
                                     <i class="far fa-edit"></i> Editar</a>
                             </td>
+                            <td>
+                                <a class="btn btn-danger"  href="${pageContext.request.contextPath}/ServletCursosController?accion=eliminar&idCurso=${curso.idCurso}"><i class="fas fa-trash"></i>  Eliminar</a></td>
                         </tr>
                     </c:forEach>
                 </tbody>
