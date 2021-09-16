@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\controllers\ServletAsignacionAlumnoController.java
 C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\domain\Horario.java
 C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\idao\ICarreraTecnicaDao.java
@@ -94,3 +95,35 @@ C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2\src\main\java
 C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\controllers\ServletCarreraTecnicaController.java
 C:\Users\gabri\OneDrive\Escritorio\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\dao\AsignacionAlumnoDaoImpl.java
 >>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
+=======
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\controllers\ServletHorarioController.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\dao\AlumnoDaoImpl.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\controllers\ServletCarreraTecnicaController.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\domain\CarreraTecnica.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\dao\SalonDaoImpl.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\domain\Instructor.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\idao\ICursosDao.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\idao\IHorarioDao.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\controllers\ServletAsignacionAlumnoController.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\controllers\ServletCursosController.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\dao\HorarioDaoImpl.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\domain\Salon.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\system\Principal.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\domain\AsignacionAlumno.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\dao\CursoDaoImpl.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\controllers\ServletInstructorController.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\idao\ISalonDao.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\domain\Alumno.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\dao\InstructorDaoImpl.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\idao\IAlumnoDao.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\idao\IInstructorDao.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\controllers\ServletSalonController.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\dao\CarreraTecnicaDaoImpl.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\controllers\ServletAlumnoController.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\domain\Horario.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\idao\ICarreraTecnicaDao.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\db\Conexion.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\domain\Cursos.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\dao\AsignacionAlumnoDaoImpl.java
+D:\KINAL 2021\KINAL 2021\Informatica\Taller\4to bimestre\IN5BM PROYECTO EN EQUIPO\IN5BM_Control_Academico_Equipo2\src\main\java\com\in5bm\equipo2\models\idao\IAsignacionAlumnoDao.java
+>>>>>>> 64305b3cf6efb4b75546eaa3e7c3839356dcfe35
