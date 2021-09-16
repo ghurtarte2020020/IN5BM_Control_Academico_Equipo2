@@ -10,7 +10,6 @@ package com.in5bm.equipo2.controllers;
 
 import com.in5bm.equipo2.models.dao.InstructorDaoImpl;
 import com.in5bm.equipo2.models.domain.Instructor;
-import com.mysql.cj.util.EscapeTokenizer;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.http.HttpServlet;
