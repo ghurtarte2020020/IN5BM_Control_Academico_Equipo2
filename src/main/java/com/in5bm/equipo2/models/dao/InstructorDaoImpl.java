@@ -12,6 +12,9 @@ import java.util.List;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
  * 
  * @author Axel Javier Guadalupe Alvarez Felipe
  */
@@ -28,6 +31,7 @@ public class InstructorDaoImpl implements IInstructorDao{
     
     private List<Instructor> listaInstructores = new ArrayList<>();
     
+<<<<<<< HEAD
 =======
  *
  * @author Axel Javier Guadalupe Alvarez Felipe
@@ -48,6 +52,8 @@ public class InstructorDaoImpl implements IInstructorDao {
 
     private List<Instructor> listaInstructores = new ArrayList<>();
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
 
     @Override
     public List<Instructor> listar() {
@@ -56,10 +62,14 @@ public class InstructorDaoImpl implements IInstructorDao {
             pstmt = conn.prepareStatement(SQL_SELECT);
             rs = pstmt.executeQuery();
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
 
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+            
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
             while (rs.next()) {
                 int idInstructor = rs.getInt("instructor_id");
                 String apellidos = rs.getString("apellidos");
@@ -67,20 +77,28 @@ public class InstructorDaoImpl implements IInstructorDao {
                 String direccion = rs.getString("direccion");
                 String telefono = rs.getString("telefono");
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
 =======
 
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+                
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
                 instructor = new Instructor(idInstructor, apellidos, nombres, direccion, telefono);
                 listaInstructores.add(instructor);
             }
         } catch (SQLException e) {
             e.printStackTrace(System.out);
 <<<<<<< HEAD
+<<<<<<< HEAD
         } catch (Exception e){
 =======
         } catch (Exception e) {
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+        } catch (Exception e){
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
             e.printStackTrace(System.out);
         } finally {
             Conexion.close(rs);
@@ -92,6 +110,7 @@ public class InstructorDaoImpl implements IInstructorDao {
 
     @Override
     public Instructor encontrar(Instructor instructor) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 =======
@@ -125,10 +144,14 @@ public class InstructorDaoImpl implements IInstructorDao {
         
         return instructor;
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
     }
 
     @Override
     public int insertar(Instructor instructor) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 =======
@@ -158,10 +181,14 @@ public class InstructorDaoImpl implements IInstructorDao {
 
         return rows;
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
     }
 
     @Override
     public int actualizar(Instructor instructor) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 =======
@@ -192,6 +219,9 @@ public class InstructorDaoImpl implements IInstructorDao {
 
         return rows;
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
     }
 
     @Override
@@ -199,11 +229,15 @@ public class InstructorDaoImpl implements IInstructorDao {
         int rows = 0;
         try {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
            conn = Conexion.getConnection();
            pstmt = conn.prepareStatement(SQL_DELETE);
            pstmt.setInt(1, instructor.getIdInstructor());
            System.out.println(pstmt.toString());
            rows = pstmt.executeUpdate();
+<<<<<<< HEAD
 =======
             conn = Conexion.getConnection();
             pstmt = conn.prepareStatement(SQL_DELETE);
@@ -211,6 +245,8 @@ public class InstructorDaoImpl implements IInstructorDao {
             System.out.println(pstmt.toString());
             rows = pstmt.executeUpdate();
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
         } catch (Exception e) {
             e.printStackTrace(System.out);
         } finally {

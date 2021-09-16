@@ -21,6 +21,7 @@
         <title>Listado Instructores</title>
     </head>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <body>
 =======
 
@@ -28,11 +29,15 @@
 
         <!-- cabecera -->
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+    <body>
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
 
         <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white col-11 mx-auto">
             <i class="fas fa-list"></i> Listado instructores <i class="fas fa-sm fa-chalkboard-teacher"></i>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -94,6 +99,8 @@
         </div>  
 
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
         <div class="table-responsive mb-5 col-11 mx-auto">
             <table class="table table-secondary table-hover align-middle">
                 <thead class="table-dark">
@@ -105,9 +112,12 @@
                         <th>Telefono</th>
                         <th> </th>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                         <th> </th>
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
                     </tr>
                 </thead>
 
@@ -121,6 +131,7 @@
                             <td>${instructor.telefono}</td>
                             <td>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                                 <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletInstructorController?accion=editar&idInstructor=${instructor.idInstructor}">
                                     <i class="far fa-edit"></i> Editar
@@ -128,6 +139,8 @@
                             </td>
                             <td>
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
                                 <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletInstructorController?accion=eliminar&idInstructor=${instructor.idInstructor}">
                                     <i class="fas fa-trash"></i> Eliminar
                                 </a>
@@ -138,6 +151,7 @@
                 </tbody>
             </table>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
         <!--Javascript-->
@@ -156,4 +170,11 @@
     </body>
     
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+        <jsp:include page="/WEB-INF/paginas/comunes/pie-pagina.jsp"/>
+        <!--Javascript-->
+        <script src="../assets/js/jquery-3.6.0.js"></script>
+        <script src="../assets/js/bootstrap.bundle.js"></script>
+    </body>
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
 </html>

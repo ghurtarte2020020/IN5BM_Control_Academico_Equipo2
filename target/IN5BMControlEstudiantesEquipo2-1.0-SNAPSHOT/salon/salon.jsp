@@ -23,6 +23,46 @@
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
         <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white col-11 mx-auto"><i class="fas fa-list"></i> Listado Salones <i class="fas fa-sm fa-chalkboard align-middle"></i></div>
+<<<<<<< HEAD
+=======
+        <a href="#" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#addModal">
+            <i class="fas fa-plus"></i>
+            Agregar Salon
+        </a>
+        
+         <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title" id="exampleModalLabel">Agregar Salon</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form method="POST" action="${pageContext.request.contextPath}/ServletSalonController" class="was-validated">
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label class="form-label" for="nombre">Nombre</label>
+                                    <input type="text" class="form-control" name="nombre" id="nombre" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="descripcion">Descripción</label>
+                                    <input type="text" class="form-control" name="descripcion" id="descripcion" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="capacidad">Capacidad</label>
+                                    <input type="number" class="form-control" name="capacidad" id="capacidad" min="5" max="50" value="5" required>
+                                </div>
+                                <input type="hidden" name="accion" value="insertar">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-success">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                            
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
         <div class="table-responsive mb-5 col-11 mx-auto">
             <table class="table table-secondary table-hover align-middle">
                 <tr class="table-dark">
@@ -31,6 +71,10 @@
                     <th>descripcion</th>
                     <th>Nombre del Salon</th>
                     <th></th>
+<<<<<<< HEAD
+=======
+                    <th></th>
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
                 </tr>
                 <tbody>
                     <c:forEach var="salon" items="${listadoSalon}">
@@ -41,6 +85,11 @@
                             <td>${salon.nombreSalon}</td>
                             <td> <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletSalonController?accion=eliminar&salonId=${salon.salonId}"><i class="fas fa-trash"></i>  Eliminar</a>
                             </td>
+<<<<<<< HEAD
+=======
+                              <td> <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletSalonController?accion=editar&salonId=${salon.salonId}">Editar</a>
+                            </td>
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
                         </tr>
                     </c:forEach>
                 </tbody>

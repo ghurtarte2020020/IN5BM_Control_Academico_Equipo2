@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
 package com.in5bm.equipo2.controllers;
 
 import com.in5bm.equipo2.models.dao.InstructorDaoImpl;
@@ -18,6 +22,9 @@ import javax.servlet.ServletException;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
  * 
  * @author Axel Javier Guadalupe Alvarez Felipe
  */
@@ -51,6 +58,7 @@ public class ServletInstructorController extends HttpServlet{
     }
     
     private void eliminarInstructores(HttpServletRequest request, HttpServletResponse response) throws IOException{
+<<<<<<< HEAD
 =======
  *
  * @author Axel Javier Guadalupe Alvarez Felipe
@@ -159,6 +167,8 @@ public class ServletInstructorController extends HttpServlet {
 
     private void eliminarInstructores(HttpServletRequest request, HttpServletResponse response) throws IOException {
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
         int idInstructor = Integer.parseInt(request.getParameter("idInstructor"));
         Instructor instructor = new Instructor(idInstructor);
         int registrosEliminados = new InstructorDaoImpl().eliminar(instructor);
@@ -166,18 +176,26 @@ public class ServletInstructorController extends HttpServlet {
         listarInstructores(request, response);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     private void listarInstructores(HttpServletRequest request, HttpServletResponse response) throws IOException{
 =======
 
     private void listarInstructores(HttpServletRequest request, HttpServletResponse response) throws IOException {
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+    
+    private void listarInstructores(HttpServletRequest request, HttpServletResponse response) throws IOException{
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
         List<Instructor> listaInstructor = new InstructorDaoImpl().listar();
         HttpSession sesion = request.getSession();
         sesion.setAttribute("listadoInstructor", listaInstructor);
         response.sendRedirect(JSP_LISTAR);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response){
@@ -193,7 +211,10 @@ public class ServletInstructorController extends HttpServlet {
 }
 
 
+<<<<<<< HEAD
 =======
 
 }
 >>>>>>> 49fc7903cd1a595fd0ef53a8c41da6b39a3ae623
+=======
+>>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
