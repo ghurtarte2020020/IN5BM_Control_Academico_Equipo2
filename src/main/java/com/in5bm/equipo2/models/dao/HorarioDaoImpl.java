@@ -26,14 +26,17 @@ import java.util.List;
 public class HorarioDaoImpl implements IHorarioDao {
     
     private static final String SQL_SELECT = "Select horario_id, horario_inicio,horario_final from horario";
-    private static final String SQL_DELETE=  "DELETE FROM Horario WHERE horario_id = ?";
+    private static final String SQL_DELETE=  "DELETE FROM horario WHERE horario_id = ?";
+    private static final String SQL_INSERT = "INSERT INTO horario (horario_inicio, horario_final) VALUES (?,?)";
+    private static final String SQL_SELECT_BY_ID = "SELECT horario_id,horario_inicio,horario_final FROM horario WHERE horario_id = ?";
+    private static final String SQL_UPDATE = "UPDATE horario SET horario_inicio = ?,horario_final = ? WHERE horario_id = ?";
+    
     private Connection conn = null;
     private PreparedStatement psmt = null;
     private ResultSet rs = null;
     private Horario horario = null;
     private List<Horario> listaHorario = new ArrayList<>();
-    
-    @Override
+     @Override
     public List <Horario> listar(){
         try{
             conn = Conexion.getConnection();
@@ -60,27 +63,100 @@ public class HorarioDaoImpl implements IHorarioDao {
         }
         
         return listaHorario;
-        
-        
-    
-    
-    
+       
     }
     
-
     @Override
     public Horario encontrar(Horario horario) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        try{
+            conn = Conexion.getConnection();
+            psmt = conn.prepareStatement(SQL_SELECT_BY_ID);
+            psmt.setInt(1, horario.getIdHorario());
+            rs = psmt.executeQuery();
+        
+            while(rs.next()){
+                Time horarioInicio = rs.getTime("horario_inicio");
+                Time horarioFinal = rs.getTime("horario_final");            
+            
+                horario.setHorarioInicio(horarioInicio);
+                horario.setHorarioFinal(horarioFinal);
+            
+            }
+            
+        
+        
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            Conexion.close(rs);
+            Conexion.close(psmt);
+            Conexion.close(conn);
+        }
+        
+        return horario;
+        
+        
     }
-
+       
+    
+    
+  
+    /*
+    preparedStatement.setTime (1, new Time(date.getTime()));
+    preparedStatement.executeUpdate ();
+    */
     @Override
     public int insertar(Horario horario) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rows = 0;
+        try{
+        
+            conn = Conexion.getConnection();
+            psmt = conn.prepareStatement(SQL_INSERT);
+            psmt.setTime(1, new Time(horario.getDateIncio().getTime()));
+            psmt.setTime(2, new Time(horario.getDateFinal().getTime()));
+            System.out.println(psmt.toString());
+            
+            rows = psmt.executeUpdate();
+            
+        }catch(SQLException e){
+            e.printStackTrace();
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            Conexion.close(psmt);
+            Conexion.close(conn);
+        }    
+        
+        return rows;
     }
 
     @Override
     public int actualizar(Horario horario) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       int rows = 0;
+        try{
+        
+            conn = Conexion.getConnection();
+            psmt = conn.prepareStatement(SQL_UPDATE);
+            psmt.setTime(1, horario.getHorarioInicio());
+            psmt.setTime(2, horario.getHorarioFinal());
+            psmt.setInt(3,horario.getIdHorario());
+            System.out.println(psmt.toString());
+            
+            rows = psmt.executeUpdate();
+            
+        }catch(SQLException e){
+            e.printStackTrace();
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            Conexion.close(psmt);
+            Conexion.close(conn);
+        }    
+        
+        return rows;
     }
 
     @Override

@@ -6,6 +6,7 @@
 package com.in5bm.equipo2.models.domain;
 
 import java.sql.Time;
+import java.util.Date;
 
 /**
  * @author Cristian Noe Cumez Morales
@@ -16,27 +17,59 @@ import java.sql.Time;
 
 public class Horario {
     
-    private int idHorario;
+    private  int idHorario;
     private Time horarioInicio;
-    private Time horarioSalida;
+    private Time horarioFinal;
+    private Date dateInicio;
+    private Date dateFinal;
 
     public Horario() {
    
+    }
+    
+    
+
+    
+
+    public Horario(Time horarioInicio, Time horarioFinal) {
+        this.horarioInicio = horarioInicio;
+        this.horarioFinal = horarioFinal;
+    }
+
+    public Horario(int idHorario, Time horarioInicio, Time horarioFinal) {
+        this.idHorario = idHorario;
+        this.horarioInicio = horarioInicio;
+        this.horarioFinal = horarioFinal;
+    }
+
+    public Horario(Date dateInicio, Date dateFinal) {
+        this.dateInicio = dateInicio;
+        this.dateFinal = dateFinal;
     }
 
     public Horario(int idHorario) {
         this.idHorario = idHorario;
     }
-
-    public Horario(Time horarioInicio, Time horarioSalida) {
-        this.horarioInicio = horarioInicio;
-        this.horarioSalida = horarioSalida;
+   
+    /*
+    public Horario(int idHorario) {
+       
+    }
+    */
+    public Date getDateIncio() {
+        return dateInicio;
     }
 
-    public Horario(int idHorario, Time horarioInicio, Time horarioSalida) {
-        this.idHorario = idHorario;
-        this.horarioInicio = horarioInicio;
-        this.horarioSalida = horarioSalida;
+    public void setDateInicio(Date dateInicio) {
+        this.dateInicio = dateInicio;
+    }
+
+    public Date getDateFinal() {
+        return dateFinal;
+    }
+
+    public void setDateFinal(Date dateFinal) {
+        this.dateFinal = dateFinal;
     }
 
     public int getIdHorario() {
@@ -55,17 +88,17 @@ public class Horario {
         this.horarioInicio = horarioInicio;
     }
 
-    public Time getHorarioSalida() {
-        return horarioSalida;
+    public Time getHorarioFinal() {
+        return horarioFinal;
     }
 
-    public void setHorarioSalida(Time horarioSalida) {
-        this.horarioSalida = horarioSalida;
+    public void setHorarioFinal(Time horarioFinal) {
+        this.horarioFinal = horarioFinal;
     }
 
     @Override
     public String toString() {
-        return "Horario{" + "idHorario=" + idHorario + ", horarioInicio=" + horarioInicio + ", horarioSalida=" + horarioSalida + '}';
+        return "Horario{" + "idHorario=" + idHorario + ", horarioInicio=" + horarioInicio + ", horarioFinal=" + horarioFinal + '}';
     }
     
         
