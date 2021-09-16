@@ -1,30 +1,30 @@
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\controllers\ServletAsignacionAlumnoController.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\domain\Horario.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\idao\ICarreraTecnicaDao.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\domain\AsignacionAlumno.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\dao\InstructorDaoImpl.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\controllers\ServletSalonController.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\idao\IAsignacionAlumnoDao.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\db\Conexion.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\dao\CursoDaoImpl.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\controllers\ServletHorarioController.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\idao\IHorarioDao.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\idao\ISalonDao.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\domain\Instructor.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\dao\SalonDaoImpl.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\dao\AsignacionAlumnoDaoImpl.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\controllers\ServletAlumnoController.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\domain\CarreraTecnica.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\idao\IInstructorDao.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\dao\CarreraTecnicaDaoImpl.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\domain\Cursos.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\domain\Alumno.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\idao\IAlumnoDao.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\dao\AlumnoDaoImpl.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\domain\Salon.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\system\Principal.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\controllers\ServletCursosController.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\controllers\ServletInstructorController.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\idao\ICursosDao.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\models\dao\HorarioDaoImpl.java
-C:\Users\gabri\OneDrive\Escritorio\equipo2-sprint2\src\main\java\com\in5bm\equipo2\controllers\ServletCarreraTecnicaController.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\dao\HorarioDaoImpl.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\idao\IHorarioDao.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\controllers\ServletInstructorController.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\controllers\ServletAlumnoController.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\db\Conexion.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\dao\SalonDaoImpl.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\idao\IInstructorDao.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\controllers\ServletSalonController.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\dao\CursoDaoImpl.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\idao\ICursosDao.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\system\Principal.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\domain\Alumno.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\domain\CarreraTecnica.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\controllers\ServletAsignacionAlumnoController.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\controllers\ServletCursosController.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\domain\Salon.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\idao\IAsignacionAlumnoDao.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\dao\AsignacionAlumnoDaoImpl.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\dao\AlumnoDaoImpl.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\idao\ICarreraTecnicaDao.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\domain\AsignacionAlumno.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\domain\Horario.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\controllers\ServletCarreraTecnicaController.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\domain\Instructor.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\dao\InstructorDaoImpl.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\controllers\ServletHorarioController.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\domain\Cursos.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\idao\ISalonDao.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\dao\CarreraTecnicaDaoImpl.java
+C:\Users\doazm\OneDrive\Documents\Proyecto de grupo 2\IN5BM_Control_Academico_Equipo2_cursos\src\main\java\com\in5bm\equipo2\models\idao\IAlumnoDao.java
