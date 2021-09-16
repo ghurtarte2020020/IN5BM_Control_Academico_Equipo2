@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.in5bm.equipo2.models.dao;
 
 import com.in5bm.equipo2.db.Conexion;
@@ -15,15 +14,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
- * 
- * @author 
- * @date 2/09/2021
+ *
+ * @author @date 2/09/2021
  * @time 06:50:08 PM
  */
-public class SalonDaoImpl implements ISalonDao{
+public class SalonDaoImpl implements ISalonDao {
+
     private static final String SQL_SELECT = "Select salon_id, capacidad, descripcion, nombre_salon from Salon";
+    private static final String SQL_SELECT_BY_ID = "Select capacidad, descripcion, nombre_salon from Salon where salon_id=?";
     private static final String SQL_DELETE = "delete from Salon where salon_id =?";
+    private static final String SQL_INSERT = "INSERT INTO salon (capacidad, descripcion, nombre_salon) values (?,?,?)";
+    private static final String SQL_UPDATE = "UPDATE salon SET capacidad=?, descripcion=?, nombre_salon=? where salon_id=?";
     private PreparedStatement pstmt = null;
     private ResultSet rs = null;
     private Connection conn = null;
@@ -57,17 +60,77 @@ public class SalonDaoImpl implements ISalonDao{
 
     @Override
     public Salon encontrar(Salon salon) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            conn = Conexion.getConnection();
+            pstmt = conn.prepareStatement(SQL_SELECT_BY_ID);
+            pstmt.setInt(1, salon.getSalonId());
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                int capacidad = rs.getInt("capacidad");
+                String descripcion = rs.getString("descripcion");
+                String nombre = rs.getString("nombre_salon");
+
+                salon.setCapacidad(capacidad);
+                salon.setDescripcion(descripcion);
+                salon.setNombreSalon(nombre);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        } catch (Exception e) {
+            e.printStackTrace(System.out);
+        } finally {
+            Conexion.close(rs);
+            Conexion.close(pstmt);
+            Conexion.close(conn);
+        }
+        return salon;
     }
 
     @Override
     public int insertar(Salon salon) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rows = 0;
+        try {
+            conn = Conexion.getConnection();
+            pstmt = conn.prepareStatement(SQL_INSERT);
+            pstmt.setInt(1, salon.getCapacidad());
+            pstmt.setString(2, salon.getDescripcion());
+            pstmt.setString(3, salon.getNombreSalon());
+
+            rows = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        } catch (Exception e) {
+            e.printStackTrace(System.out);
+        } finally {
+            Conexion.close(pstmt);
+            Conexion.close(conn);
+        }
+
+        return rows;
     }
 
     @Override
     public int actualizar(Salon salon) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rows = 0;
+        try {
+            conn = Conexion.getConnection();
+            pstmt = conn.prepareStatement(SQL_UPDATE);
+            pstmt.setInt(1, salon.getCapacidad());
+            pstmt.setString(2, salon.getDescripcion());
+            pstmt.setString(3, salon.getNombreSalon());
+            pstmt.setInt(4, salon.getSalonId());
+
+            rows = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        } catch (Exception e) {
+            e.printStackTrace(System.out);
+        } finally {
+            Conexion.close(pstmt);
+            Conexion.close(conn);
+        }
+
+        return rows;
     }
 
     @Override
