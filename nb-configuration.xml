@@ -17,6 +17,7 @@ Any value defined here will override the pom.xml file value but is only applicab
         <org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_j2eeVersion>1.8-web</org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_j2eeVersion>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>gfv5ee8</org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>
 =======
         <org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>pfv5ee8</org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>
@@ -24,6 +25,9 @@ Any value defined here will override the pom.xml file value but is only applicab
 =======
         <org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>gfv5ee8</org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>
 >>>>>>> 0143fa3e7cb431a0e346f2685835c18c642cc8c4
+=======
+        <org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>pfv5ee8</org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>
+>>>>>>> 05524914eccde0252ae56eaf7593a939ea015c0f
         <org-netbeans-modules-maven-jaxws.rest_2e_config_2e_type>ide</org-netbeans-modules-maven-jaxws.rest_2e_config_2e_type>
         <org-netbeans-modules-javascript2-requirejs.enabled>true</org-netbeans-modules-javascript2-requirejs.enabled>
         <org-netbeans-modules-web-clientproject-api.js_2e_libs_2e_folder>js/libs</org-netbeans-modules-web-clientproject-api.js_2e_libs_2e_folder>
