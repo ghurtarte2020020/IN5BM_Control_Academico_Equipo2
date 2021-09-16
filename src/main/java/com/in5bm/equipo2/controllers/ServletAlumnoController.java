@@ -24,12 +24,14 @@ import javax.servlet.ServletException;
  * @date 30-ago-2021
  * @time 22:25:45
  */
-
 @WebServlet("/ServletAlumnoController")
 public class ServletAlumnoController extends HttpServlet {
+
     private static final String JSP_LISTAR = "alumno/alumno.jsp";
+    private static final String JSP_EDITAR = "alumno/editar-alumno.jsp";
+
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String accion = request.getParameter("accion");
 
         if (accion != null) {
@@ -38,7 +40,7 @@ public class ServletAlumnoController extends HttpServlet {
                     listarAlumno(request, response);
                     break;
                 case "editar":
-                    //editarAlumno(request, response);
+                    editarAlumno(request, response);
                     break;
                 case "eliminar":
                     eliminarAlumno(request, response);
@@ -62,5 +64,72 @@ public class ServletAlumnoController extends HttpServlet {
         int alumnoEliminado = new AlumnoDaoImpl().eliminar(alumno);
         System.out.println("CANTIDAD DE ALUMNOS ELIMINADOS: " + alumnoEliminado);
         listarAlumno(request, response);
+    }
+
+    private void insertarAlumno(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        System.out.println("insertarAlumno");
+
+        String apellidos = request.getParameter("apellidos");
+        String nombres = request.getParameter("nombres");
+        String email = request.getParameter("email");
+
+        //OBJETO ALUMNO
+        Alumno alumno = new Alumno(apellidos, nombres, email);
+        System.out.println(alumno);
+
+        //INSERTAR EN DB
+        int alumnoInsertado = new AlumnoDaoImpl().insertar(alumno);
+        System.out.println("Alumno Insertado:" + alumnoInsertado);
+
+        listarAlumno(request, response);
+    }
+
+    private void editarAlumno(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String carne = request.getParameter("carne");
+
+        Alumno alumno = new AlumnoDaoImpl().encontrar(new Alumno(carne));
+        request.setAttribute("Alumno:", alumno);
+        System.out.println(alumno);
+
+        request.getRequestDispatcher(JSP_EDITAR).forward(request, response);
+    }
+
+    private void actualizarAlumno(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        System.out.println("insertarAlumno");
+
+        String carne = request.getParameter("carne");
+        String apellidos = request.getParameter("apellidos");
+        String nombres = request.getParameter("nombres");
+        String email = request.getParameter("email");
+
+        //OBJETO ALUMNO
+        Alumno alumno = new Alumno(carne, apellidos, nombres, email);
+        System.out.println(alumno);
+
+        //ACTUALIZAR EN DB
+        int alumnoModificado = new AlumnoDaoImpl().actualizar(alumno);
+        System.out.println("Alumno Modificado:" + alumnoModificado);
+
+        listarAlumno(request, response);
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        request.setCharacterEncoding("UTF-8");
+
+        System.out.println("Estoy En El Metodod POST");
+
+        String accion = request.getParameter("accion");
+        System.out.println("accion: " + accion);
+
+        if (accion != null) {
+            switch (accion) {
+                case "insertar":
+                    insertarAlumno(request, response);
+                    break;
+                case "actualizar":
+                    actualizarAlumno(request, response);
+                    break;
+            }
+        }
     }
 }
