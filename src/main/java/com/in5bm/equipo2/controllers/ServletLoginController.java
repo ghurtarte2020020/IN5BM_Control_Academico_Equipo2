@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Base64;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,7 +28,7 @@ public class ServletLoginController extends HttpServlet {
     private String userDB;
     private String nombreDB;
     private final String ERROR = "El usuario o la contraseña son incorrectos";
-    private String mensaje="";
+    private String mensaje = "";
     private static final String SQL_SELECT = "SELECT nombre, usuario, clave FROM usuario WHERE usuario=?";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -35,14 +36,20 @@ public class ServletLoginController extends HttpServlet {
         HttpSession sesion = request.getSession();
         String user = request.getParameter("usuario");
         String pass = request.getParameter("clave");
+        pass.trim();
         getPassword(user);
-        if (user.equals(this.userDB) && pass.equals(this.passDB)) {
-            response.sendRedirect("inicio.jsp");
-        } else {
-            this.mensaje=this.ERROR;
-            response.sendRedirect("login.jsp");
+        if (this.passDB != null) {
+            String pass64 = new String(Base64.getDecoder().decode(this.passDB));
+            if (user.equals(this.userDB) && pass.equals(pass64)) {
+                response.sendRedirect("inicio.jsp");
+                this.mensaje = "";
+            } else {
+                this.mensaje = this.ERROR;
+                response.sendRedirect("login.jsp");
+            }
         }
-        sesion.setAttribute("mensaje",mensaje);
+
+        sesion.setAttribute("mensaje", mensaje);
     }
 
     private void getPassword(String user) {

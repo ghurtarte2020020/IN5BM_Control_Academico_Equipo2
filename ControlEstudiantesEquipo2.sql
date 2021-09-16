@@ -170,4 +170,4 @@ clave VARCHAR(45) NOT NULL,
 PRIMARY KEY(usuario_id)
 );
 
-INSERT INTO usuario(nombre, usuario, clave) values("Jorge", "admin", "root");
+INSERT INTO usuario(nombre, usuario, clave) values("Jorge", "admin", "cm9vdA==");

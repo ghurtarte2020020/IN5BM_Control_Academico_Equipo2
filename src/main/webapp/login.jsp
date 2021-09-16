@@ -17,7 +17,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
               rel="stylesheet">
         <script src="https://kit.fontawesome.com/bc893c1d65.js" crossorigin="anonymous"></script>
-        <title>Control Academico</title>
+        <title>Inicio de Sesión</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
