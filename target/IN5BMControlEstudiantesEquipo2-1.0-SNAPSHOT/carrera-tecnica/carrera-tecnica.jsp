@@ -22,12 +22,48 @@
     <body>
         <jsp:include page="/WEB-INF/paginas/comunes/cabecera.jsp"/>
         <div class="shadow p-3 m-4 fs-3 bg-primary bg-gradient rounded text-center text-white col-11 mx-auto"><i class="fas fa-list"></i> Listado Carreras <i class="fas fa-sm fa-laptop align-middle"></i></div>
-        <div class="table-responsive mb-5 col-11 mx-auto" >
+        <div class="col-11 mx-auto">
+            <a href="#" class="btn btn-success btn-block" data-bs-toggle="modal" data-bs-target="#addModal">
+                <i class="fas fa-plus"></i>
+                Agregar Carrera
+            </a>    
+        </div>    
+
+        <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="exampleModalLabel">Agregar Carrera</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form method="POST" action="${pageContext.request.contextPath}/ServletCarreraTecnicaController" class="was-validated">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label" for="codigo">Codigo</label>
+                                <input type="text" class="form-control" name="codigo" id="codigo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="nombre">Nombre de la Carrera</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" required>
+                            </div>
+                            <input type="hidden" name="accion" value="insertar">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-success">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive my-3 col-11 mx-auto" >
             <table class="table table-secondary table-hover table-responsive align-middle">
                 <thead class="table-dark">
                     <tr>
                         <th >#</th>
                         <th >nombre</th>
+                        <th > </th>
                         <th > </th>
                     </tr>
                 </thead>
@@ -36,6 +72,9 @@
                         <tr>
                             <td>${carrera.codigo_carrera}</td>
                             <td>${carrera.nombre}</td>
+                            <td>
+                                <a class="btn btn-warning" href="${pageContext.request.contextPath}/ServletCarreraTecnicaController?accion=editar&codigo_carrera=${carrera.codigo_carrera}"><i class="far fa-edit"></i>  Editar</a>
+                            </td>
                             <td>
                                 <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/ServletCarreraTecnicaController?accion=eliminar&codigo_carrera=${carrera.codigo_carrera}"><i class="fas fa-trash"></i>  Eliminar</a>
                             </td>

@@ -163,3 +163,13 @@ INSERT INTO asignacion_alumno(asignacion_id, carne, curso_id, fecha_asignacion) 
 INSERT INTO asignacion_alumno(asignacion_id, carne, curso_id, fecha_asignacion) values('a8','2020201', '3', '2021-05-11 21:00:00');
 INSERT INTO asignacion_alumno(asignacion_id, carne, curso_id, fecha_asignacion) values('a9','2021029', '5', '2021-08-04 08:00:00');
 INSERT INTO asignacion_alumno(asignacion_id, carne, curso_id, fecha_asignacion) values('a10','2018098', '10', '2021-01-10 22:00:00');
+
+CREATE TABLE usuario(
+usuario_id INT NOT NULL AUTO_INCREMENT,
+nombre VARCHAR(45) NOT NULL,
+usuario VARCHAR(45) NOT NULL,
+clave VARCHAR(45) NOT NULL,
+PRIMARY KEY(usuario_id)
+);
+
+INSERT INTO usuario(nombre, usuario, clave) values("Jorge", "admin", "cm9vdA==");
