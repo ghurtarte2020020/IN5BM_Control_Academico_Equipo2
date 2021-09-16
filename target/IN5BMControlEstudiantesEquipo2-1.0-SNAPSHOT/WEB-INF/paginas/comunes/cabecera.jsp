@@ -8,7 +8,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-center text-white" id="navbarNav">
-            <a class="navbar-brand d-none d-lg-block"href="${pageContext.request.contextPath}/index.jsp"
+            <a class="navbar-brand d-none d-lg-block"href="${pageContext.request.contextPath}/inicio.jsp"
                >Control <i class="material-icons fs-2 align-middle">school</i>&nbsp Académico</a
             >
             <ul class="navbar-nav">

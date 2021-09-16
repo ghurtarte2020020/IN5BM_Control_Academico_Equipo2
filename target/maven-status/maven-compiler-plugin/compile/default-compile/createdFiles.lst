@@ -27,4 +27,5 @@ com\in5bm\equipo2\controllers\ServletAlumnoController.class
 com\in5bm\equipo2\models\dao\CursoDaoImpl.class
 com\in5bm\equipo2\controllers\ServletInstructorController.class
 com\in5bm\equipo2\controllers\ServletCarreraTecnicaController.class
+com\in5bm\equipo2\controllers\ServletLoginController.class
 com\in5bm\equipo2\models\dao\HorarioDaoImpl.class
