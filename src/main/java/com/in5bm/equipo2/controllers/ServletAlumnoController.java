@@ -88,7 +88,7 @@ public class ServletAlumnoController extends HttpServlet {
         String carne = request.getParameter("carne");
 
         Alumno alumno = new AlumnoDaoImpl().encontrar(new Alumno(carne));
-        request.setAttribute("Alumno:", alumno);
+        request.setAttribute("alumno", alumno);
         System.out.println(alumno);
 
         request.getRequestDispatcher(JSP_EDITAR).forward(request, response);
