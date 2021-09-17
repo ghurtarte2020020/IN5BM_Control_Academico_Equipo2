@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <fmt:setLocale value="es_GT"/>
 <!DOCTYPE html>
 <html>
@@ -41,7 +42,7 @@
 
                                     <label for="horarioInicio" class="form-label text-light">Horario Inicio</label>
                                     <div class="input-group clockpicker" data-placement="top" data-align="top" data-autoclose="true" readonly="">
-                                        <input type="text" class="form-control" name="horarioInicio" id="horarioInicio" required value="${horario.horarioInicio}">
+                                        <input type="time" class="form-control" name="horarioInicio" id="horarioInicio" required value="${horario.horarioInicio}">
                                         <span class="input-group-addon">
                                             <span  class="glyphicon glyphicon-time"></span>
                                         </span>
@@ -50,7 +51,7 @@
                                     <label for="horarioInicio" class="form-label text-light">Horario Final</label>
                                     <div class="input-group clockpicker" data-placement="top" data-align="top" data-autoclose="true" readonly="">
                                        
-                                        <input type="text" class="form-control" name="horarioFinal" id="horarioFinal" required value="${horario.horarioFinal}"
+                                        <input type="time" class="form-control" name="horarioFinal" id="horarioFinal" required value="${horario.horarioFinal}"
                                                text=" ">
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-time"></span>

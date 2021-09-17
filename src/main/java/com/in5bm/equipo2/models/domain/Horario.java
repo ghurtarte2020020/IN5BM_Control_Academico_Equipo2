@@ -46,6 +46,14 @@ public class Horario implements Serializable {
         this.idHorario = idHorario;
     }
 
+    public Horario(int idHorario, Date dateInicio, Date dateFinal) {
+        this.idHorario = idHorario;
+        this.dateInicio = dateInicio;
+        this.dateFinal = dateFinal;
+    }
+
+
+
     /*
     public Horario(int idHorario) {
        
